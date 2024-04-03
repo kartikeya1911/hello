@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BEAUTY Auction</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles */
+        body {
+            background-image: url(https://1.bp.blogspot.com/_RphxnciltFY/THKoXMkjTLI/AAAAAAAAAMk/tOgMgW1zyko/s1600/Frame+cantik+02.jpg);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+        }
+        .card {
+            margin: 10px;
+            width: 250px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card-img-top {
+            height: 150px;
+            object-fit: cover;
+        }
+        .card-body {
+            padding: 15px;
+            background-color: #fff;
+        }
+        .card-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .btn {
+            width: 100%;
+            margin-top: 10px;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        .btn-primary:hover {
+            background-color: #00b32d;
+            border-color: #0056b3;
+        }
+        .spinner-border {
+            margin-top: 20px;
+        }
+        .container h1{
+            background-color: rgb(240, 127, 96);
+        }
+    </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>WELCOME TO BEAUTY PRODUCTS AUCTION</h1>
+
+    <div class="row" id="auction-items">
+        <!-- Medical items with buttons and spinners will be displayed here -->
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const auctionItemsContainer = document.getElementById("auction-items");
+
+        // Predefined medical items
+        const medicalItems = [
+            { name: "BODY LOTION",        image: "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/4/9/493ce958904245706579_1.jpg" },
+            { name: "VASELINE",           image: "https://tse2.mm.bing.net/th?id=OIP.WK976j5a9-8CRAQT195vTgHaHi&pid=Api&P=0&h=180" },
+            { name: "HAIR DRYER",         image: "https://media.allure.com/photos/59ee51473c8dda559aea8183/master/pass/blow-dryers.jpg?mbid=social_retweet" },
+            { name: "LIPSTICK",           image: "https://i0.wp.com/www.crazyaboutcolors.com/wp-content/uploads/2015/03/NARS-Audacious-Lipstick-Collection-Stylized-Image-1-jpeg.jpg" },
+            { name: "HAIR BAND",          image: "https://ae01.alicdn.com/kf/HTB1dpaxeyOYBuNjSsD4q6zSkFXad/Pearl-Hair-band-Headband-for-Women-Girls-Acrylic-Rhinestone-Hair-Accessory-Jewelry-Ornament-Tiara-Wedding-Bridal.jpg" },
+            { name: "BRACELET",           image: "https://tse1.mm.bing.net/th?id=OIP.E-YPF6nUjXMPuez48nNBNwHaHa&pid=Api&P=0&h=180" },
+            { name: "Lash Mascara",       image: "https://tse2.mm.bing.net/th?id=OIP.fDgfAR6kRNJfGDNUL5OueQHaFb&pid=Api&P=0&h=180" },
+            { name: "Eyeshadow Palette",  image: "https://assets.vogue.com/photos/61bb7f02fb14c814c6ecb8cb/3:4/w_640,c_limit/slide_16.jpg" },
+            { name: "HAIR SPRAY",         image: "https://tse4.explicit.bing.net/th?id=OIP.N6GLIGZjnUtK2kgf_v5CawHaEK&pid=Api&P=0&h=180" },
+            { name: "Hair Brush",         image: "https://tse4.mm.bing.net/th?id=OIP.KmguEJi__BaK4YOmQdc2DgHaEO&pid=Api&P=0&h=180" },
+            { name: "Facial Vibrante Serum",  image: "https://i5.walmartimages.com/asr/887d688e-89b3-430a-af1c-be197453f0ae_1.93868f11af25dd4442c95aea231c5657.jpeg" },
+            { name: "CREAM CLEANSER",     image: "https://tse4.mm.bing.net/th?id=OIP.ZMtrrwvARISI8Qf4lgiNDQHaEK&pid=Api&P=0&h=180" },
+            { name: "Sleep Masque Night Repair",  image: "https://m.media-amazon.com/images/I/718vH7b-ysL._SL1500_.jpg" },
+            { name: "Blonde Solutions Liquid Toner",  image: "https://assets.vogue.com/photos/61bb7efa9f520c634b446677/3:4/w_640,c_limit/slide_8.jpg" },
+            { name: "FOUNDATION KIT",     image: "https://tse3.mm.bing.net/th?id=OIP.jvTZeqY6IdFWUYoWol4XUwAAAA&pid=Api&P=0&h=180" },
+            { name: "SCRUNCHES",          image: "https://tse2.mm.bing.net/th?id=OIP.YsAZckBteAQizmw6xN63nAAAAA&pid=Api&P=0&h=180" },
+            { name: "BODY LOTION",        image: "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/4/9/493ce958904245706579_1.jpg" },
+            { name: "VASELINE",           image: "https://tse2.mm.bing.net/th?id=OIP.WK976j5a9-8CRAQT195vTgHaHi&pid=Api&P=0&h=180" },
+            { name: "HAIR DRYER",         image: "https://media.allure.com/photos/59ee51473c8dda559aea8183/master/pass/blow-dryers.jpg?mbid=social_retweet" },
+            { name: "LIPSTICK",           image: "https://i0.wp.com/www.crazyaboutcolors.com/wp-content/uploads/2015/03/NARS-Audacious-Lipstick-Collection-Stylized-Image-1-jpeg.jpg" },
+            { name: "HAIR BAND",          image: "https://ae01.alicdn.com/kf/HTB1dpaxeyOYBuNjSsD4q6zSkFXad/Pearl-Hair-band-Headband-for-Women-Girls-Acrylic-Rhinestone-Hair-Accessory-Jewelry-Ornament-Tiara-Wedding-Bridal.jpg" },
+            { name: "BRACELET",           image: "https://tse1.mm.bing.net/th?id=OIP.E-YPF6nUjXMPuez48nNBNwHaHa&pid=Api&P=0&h=180" },
+            { name: "Lash Mascara",       image: "https://tse2.mm.bing.net/th?id=OIP.fDgfAR6kRNJfGDNUL5OueQHaFb&pid=Api&P=0&h=180" },
+            { name: "Eyeshadow Palette",  image: "https://assets.vogue.com/photos/61bb7f02fb14c814c6ecb8cb/3:4/w_640,c_limit/slide_16.jpg" },
+            { name: "HAIR SPRAY",         image: "https://tse4.explicit.bing.net/th?id=OIP.N6GLIGZjnUtK2kgf_v5CawHaEK&pid=Api&P=0&h=180" },
+            { name: "Hair Brush",         image: "https://tse4.mm.bing.net/th?id=OIP.KmguEJi__BaK4YOmQdc2DgHaEO&pid=Api&P=0&h=180" },
+            { name: "Facial Vibrante Serum",  image: "https://i5.walmartimages.com/asr/887d688e-89b3-430a-af1c-be197453f0ae_1.93868f11af25dd4442c95aea231c5657.jpeg" },
+            { name: "CREAM CLEANSER",     image: "https://tse4.mm.bing.net/th?id=OIP.ZMtrrwvARISI8Qf4lgiNDQHaEK&pid=Api&P=0&h=180" },
+            { name: "Sleep Masque Night Repair",  image: "https://m.media-amazon.com/images/I/718vH7b-ysL._SL1500_.jpg" },
+            { name: "Blonde Solutions Liquid Toner",  image: "https://assets.vogue.com/photos/61bb7efa9f520c634b446677/3:4/w_640,c_limit/slide_8.jpg" },
+            { name: "FOUNDATION KIT",     image: "https://tse3.mm.bing.net/th?id=OIP.jvTZeqY6IdFWUYoWol4XUwAAAA&pid=Api&P=0&h=180" },
+            { name: "SCRUNCHES",          image: "https://tse2.mm.bing.net/th?id=OIP.YsAZckBteAQizmw6xN63nAAAAA&pid=Api&P=0&h=180" },
+            { name: "BODY LOTION",        image: "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/4/9/493ce958904245706579_1.jpg" },
+            { name: "VASELINE",           image: "https://tse2.mm.bing.net/th?id=OIP.WK976j5a9-8CRAQT195vTgHaHi&pid=Api&P=0&h=180" },
+            { name: "HAIR DRYER",         image: "https://media.allure.com/photos/59ee51473c8dda559aea8183/master/pass/blow-dryers.jpg?mbid=social_retweet" },
+            { name: "LIPSTICK",           image: "https://i0.wp.com/www.crazyaboutcolors.com/wp-content/uploads/2015/03/NARS-Audacious-Lipstick-Collection-Stylized-Image-1-jpeg.jpg" },
+            { name: "HAIR BAND",          image: "https://ae01.alicdn.com/kf/HTB1dpaxeyOYBuNjSsD4q6zSkFXad/Pearl-Hair-band-Headband-for-Women-Girls-Acrylic-Rhinestone-Hair-Accessory-Jewelry-Ornament-Tiara-Wedding-Bridal.jpg" },
+            { name: "BRACELET",           image: "https://tse1.mm.bing.net/th?id=OIP.E-YPF6nUjXMPuez48nNBNwHaHa&pid=Api&P=0&h=180" },
+            { name: "Lash Mascara",       image: "https://tse2.mm.bing.net/th?id=OIP.fDgfAR6kRNJfGDNUL5OueQHaFb&pid=Api&P=0&h=180" },
+            { name: "Eyeshadow Palette",  image: "https://assets.vogue.com/photos/61bb7f02fb14c814c6ecb8cb/3:4/w_640,c_limit/slide_16.jpg" },
+            { name: "HAIR SPRAY",         image: "https://tse4.explicit.bing.net/th?id=OIP.N6GLIGZjnUtK2kgf_v5CawHaEK&pid=Api&P=0&h=180" },
+            { name: "Hair Brush",         image: "https://tse4.mm.bing.net/th?id=OIP.KmguEJi__BaK4YOmQdc2DgHaEO&pid=Api&P=0&h=180" },
+            { name: "Facial Vibrante Serum",  image: "https://i5.walmartimages.com/asr/887d688e-89b3-430a-af1c-be197453f0ae_1.93868f11af25dd4442c95aea231c5657.jpeg" },
+            { name: "CREAM CLEANSER",     image: "https://tse4.mm.bing.net/th?id=OIP.ZMtrrwvARISI8Qf4lgiNDQHaEK&pid=Api&P=0&h=180" },
+            { name: "Sleep Masque Night Repair",  image: "https://m.media-amazon.com/images/I/718vH7b-ysL._SL1500_.jpg" },
+            { name: "Blonde Solutions Liquid Toner",  image: "https://assets.vogue.com/photos/61bb7efa9f520c634b446677/3:4/w_640,c_limit/slide_8.jpg" },
+            { name: "FOUNDATION KIT",     image: "https://tse3.mm.bing.net/th?id=OIP.jvTZeqY6IdFWUYoWol4XUwAAAA&pid=Api&P=0&h=180" },
+            { name: "SCRUNCHES",          image: "https://tse2.mm.bing.net/th?id=OIP.YsAZckBteAQizmw6xN63nAAAAA&pid=Api&P=0&h=180" },
+
+
+            
+
+
+
+            // Add more medical items as needed
+        ];
+
+        // Create cards with buttons and spinners for each medical item
+        medicalItems.forEach(item => {
+            const medicalCard = document.createElement("div");
+            medicalCard.classList.add("card");
+            medicalCard.innerHTML = `
+                <img src="${item.image}" class="card-img-top" alt="${item.name}">
+                <div class="card-body">
+                    <h5 class="card-title">${item.name}</h5>
+                    <button class="btn btn-primary" onclick="placeBid('${item.name}')">Place Bid</button>
+                    <div class="spinner-border text-primary" role="status" style="display: none;">
+                        <span class="sr-only">Loading...</span>
+                    </div>
+                </div>
+            `;
+
+            auctionItemsContainer.appendChild(medicalCard);
+        });
+    });
+
+    function placeBid(itemName) {
+        const cards = document.getElementsByClassName("card");
+        for (let i = 0; i < cards.length; i++) {
+            if (cards[i].querySelector('.card-title').textContent === itemName) {
+                const spinner = cards[i].querySelector('.spinner-border');
+                spinner.style.display = "inline-block";
+
+                // Simulating a bid placement process with a delay
+                setTimeout(function() {
+                    spinner.style.display = "none";
+                    alert(`You placed a bid for ${itemName} successfully!`);
+                }, 2000); // Simulating 2 seconds delay for the bid process (adjust as needed)
+                break;
+            }
+        }
+    }
+  </script>
+</body>
+</html>

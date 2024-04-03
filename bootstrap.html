@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beautiful Homepage</title>
+  
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+
+.navbar-custom {
+      background-color: #3498db; 
+    }
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-nav .nav-link {
+      color: #fff; 
+    }
+.navbar-custom .navbar-toggler-icon {
+      background-color: #d3d0c2; 
+    }
+.slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  width: 700%; 
+}
+
+.slide {
+  width: 100%; 
+  float: left;
+}
+.slide img{ 
+  width:45%;
+  padding-top: 10px;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+
+.homepage {
+      background-color: #f5f5f5;
+      height: 100vh; 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+.homepage-content {
+      color: #333; 
+    }
+.addlink{
+        text-decoration: none;}
+                                                          
+@keyframes slider {
+             0% { left: 0; }
+            30% { left: 0; }
+            33% { left: -100%; }
+            63% { left: -100%; }
+            66% { left: -200%; }
+            95% { left: -200%; }
+            100% { left: 0; }
+           }
+
+
+.animate-img:hover {
+            transform: scale(0.9);
+        }
+.offers{
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            color: #47294c;
+            text-decoration: none;
+        }
+        
+.offers h1 {
+          text-decoration: none;
+          color: black;
+          border: 2px solid #6c0057;
+          background: #e49c52;
+        }
+#bankandotheroffers{
+            display: flex;
+            justify-content: center;
+            text-decoration: none;
+        }
+#bankandotheroffers img{
+          width:25%;
+        }
+.container-fluid h1{
+    background-color: #e49c52;
+    text-align: center;
+    margin-top: 8px;
+    margin-bottom: 10px;}
+.image-container {
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+    margin-left: 25px;
+}
+
+.category-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out; 
+}
+
+.image-container:hover .category-image {
+    transform: scale(0.9); 
+}
+
+
+                         
+        
+        
+       
+
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+  <a class="navbar-brand" href="#">Auction Vista</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="bootstrap.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="about.html">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="services.html">Services</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="contact.html">Contact</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="login1.html">Login</a>
+      </li>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Categories
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="p.html">Add Items</a>
+
+              <a class="dropdown-item" href="electronic.html">Electronics</a>
+              <a class="dropdown-item" href="md.html">Medical</a>
+              <a class="dropdown-item" href="watches.html">Watches</a>
+              <a class="dropdown-item" href="beauty.html">Beauty</a>
+              <a class="dropdown-item" href="MOBILE.HTML">Mobile</a>
+              <a class="dropdown-item" href="sports.html">sports</a>
+              <a class="dropdown-item" href="shoes.html">shoes</a>
+
+
+
+
+
+
+              <a class="dropdown-item" href="fashion.html">Fashion</a>
+              <a class="dropdown-item" href="SPORTSsss.html">cricket Bats</a>
+              <a class="dropdown-item" href="books.html">Books</a>
+              <a class="dropdown-item" href="medical.html">Health</a>
+              <a class="dropdown-item" href="Decoration.html">Decoration</a>
+
+              <a class="dropdown-item" href="Jewellery.html">Jewellery</a>
+
+              <a class="dropdown-item" href="portfolio.html">Portfolio</a>
+              <a class="dropdown-item" href="CHECKOUT.html">Payment Gateway</a>
+
+              
+
+
+
+    
+            </div>
+          </li>
+        </ul>
+      </div>
+    </ul>
+  </div>
+</nav>
+<div class="slider">
+  <div class="slides">
+
+    <div class="slide" data-category="watches">
+      <img style="width: 71%;" src="watches slider.jpg" alt="watches">
+    </div>
+
+    <div class="slide" data-category="shows">
+      <img style="width: 71%;" src="shows slider.jpg" alt="watches">
+    </div>
+
+    <div class="slide" data-category="watches">
+      <img style="width: 71%;" src="earphone slider.jpg" alt="watches">
+    </div>
+
+
+    
+    <div class="slide" data-category="medical">
+      <img style="width:80%;  height:100%; "   src="medslide.jpg" alt="Clothing">
+    </div>
+    <div class="slide" data-category="books">
+      <img src="category3.gif" alt="Books">
+    </div>
+  </div>
+  <button class="prev">&#10094;</button>
+  <button class="next">&#10095;</button>
+</div>
+
+<div class="homepage">
+  <div class="homepage-content">
+    <h1>Welcome to Our Website</h1>
+    <p>This is a beautiful homepage created using Bootstrap.</p>
+  </div>
+</div>
+
+<div class="image-container" data-category="watches">
+  <img src="casio watch.jpg" class="category-image" alt="watches">
+</div>
+<div class="image-container" data-category="watches">
+  <img  src="fossil watch.jpg" class="category-image" alt="watches">
+</div>
+<div class="image-container" data-category="clothing">
+  <img style="height: 105%;" src="women wear.jpg" class="category-image" alt="clothing">
+</div>
+
+<div class="image-container" data-category="clothing">
+  <img  src="biba bride.jpg" class="category-image" alt="clothing">
+</div>
+<div class="image-container" data-category="clothing">
+  <img src="biba.jpg" class="category-image" alt="clothing">
+</div>
+
+<div class="image-container" data-category="books">
+  <img src="marshall.jpg" class="category-image" alt="Books">
+</div>
+
+
+
+
+
+<div class="image-container" data-category="shows">
+  <img src="skechers.jpg" class="category-image" alt="Books">
+</div>
+
+<div class="image-container" data-category="shows">
+  <img src="campus shows.jpg" class="category-image" alt="Books">
+</div>
+
+<div class="image-container" data-category="shows">
+  <img src="new balance shows.jpg" class="category-image" alt="Books">
+</div>
+
+<div class="image-container" data-category="shows">
+  <img src="ap.jpg" class="category-image" alt="Books">
+</div>
+
+<div class="image-container" data-category="clothing">
+  <img src="pink.jpg" class="category-image" alt="clothing">
+</div>
+
+<div class="image-container" data-category="books">
+  <img src="ss.jpg" class="category-image" alt="Books">
+</div>
+
+<div class="image-container" data-category="books">
+  <img src="pyrse2.jpg" class="category-image" alt="Books">
+</div>
+
+<div class="image-container" data-category="clothing">
+  <img src="mia tanishq.jpg" class="category-image" alt="clothing">
+</div>
+
+<div class="image-container" data-category="clothing">
+  <img src="vero moda.jpg" class="category-image" alt="clothing">
+</div>
+
+<div class="image-container" data-category="beauty">
+  <img src="lip.jpg" class="category-image" alt="beauty">
+</div>
+
+<div class="image-container" data-category="beauty">
+  <img src="bl.jpg" class="category-image" alt="beauty">
+</div>
+
+<div class="image-container" data-category="beauty">
+  <img src="serumss.jpg" class="category-image" alt="beauty">
+</div>
+
+<div class="image-container" data-category="watches">
+  <img src="garmin.jpg" class="category-image" alt="watches">
+</div>
+
+<div class="image-container" data-category="books">
+  <img src="purse.jpg" class="category-image" alt="Books">
+</div>
+
+<div class="image-container" data-category="beauty">
+  <img src="hairoil.jpg" class="category-image" alt="beauty">
+</div>
+
+<div class="image-container" data-category="beauty">
+  <img src="makup.jpg" class="category-image" alt="beauty">
+</div>
+
+<div class="image-container" data-category="beauty">
+  <img src="skincare.jpg" class="category-image" alt="beauty">
+</div>
+
+<div class="image-container" data-category="beauty">
+  <img src="fragrance.jpg" class="category-image" alt="beauty">
+</div>
+
+<div class="image-container" data-category="beauty">
+  <img src="olay.jpg" class="category-image" alt="beauty">
+</div>
+
+<div class="image-container" data-category="clothing">
+  <img src="green soul.jpg" class="category-image" alt="clothing">
+</div>
+
+<div class="image-container" data-category="clothing">
+  <img src="mc.jpg" class="category-image" alt="clothing">
+</div>
+
+<div class="image-container" data-category="watches">
+  <img src="watches.jpg" class="category-image" alt="watches">
+</div>
+
+<div class="image-container" data-category="shows">
+  <img src="sneakers.jpg" class="category-image" alt="Books">
+</div>
+
+<div class="image-container" data-category="clothing">
+  <img src="lingerie.jpg" class="category-image" alt="clothing">
+</div>
+
+<div class="image-container" data-category="shows">
+  <img src="woodland.jpg" class="category-image" alt="Books">
+</div>
+
+<div class="image-container" data-category="clothing">
+  <img src="bls.jpg" class="category-image" alt="clothing">
+</div>
+
+<div class="image-container" data-category="books">
+  <img src="fragrances.jpg" class="category-image" alt="Books">
+</div>
+
+<div class="image-container" data-category="jewellery">
+  <img src="white goldss.jpg" class="category-image" alt="jewellery">
+</div>
+
+<div class="image-container" data-category="jewellery">
+  <img src="rose gold.jpg" class="category-image" alt="jewellery">
+</div>
+
+<div class="image-container" data-category="jewellery">
+  <img src="yellow goldss.jpg" class="category-image" alt="jewellery">
+</div>
+
+<div class="image-container" data-category="jewellery">
+  <img src="le meta.jpg" class="category-image" alt="jewellery">
+</div>
+
+<div class="image-container" data-category="jewellery">
+  <img src="Giva.jpg" class="category-image" alt="jewellery">
+</div>
+
+<div class="image-container" data-category="medical">
+  <img src="health monitors.jpg" class="category-image" alt="medical">
+</div>
+
+<div class="image-container" data-category="medical">
+  <img src="cess.jpg" class="category-image" alt="medical">
+</div>
+
+<div class="image-container" data-category="medical">
+  <img src="massagersss.jpg" class="category-image" alt="medical">
+</div>
+
+<div class="image-container" data-category="medical">
+  <img src="wscales.jpg" class="category-image" alt="medical">
+</div>
+
+<div class="image-container" data-category="medical">
+  <img src="omron.jpg" class="category-image" alt="medical">
+</div>
+
+
+
+    
+
+        </div>
+    </div>
+
+      
+     
+
+
+
+    
+
+
+
+
+
+<div class="offers">
+<h1>BANK AND OTHER OFFERS</h1></div>
+
+<div id="bankandotheroffers">
+<img src="Paytm offer.jpg" alt="Image 6"></li>
+<img src="One card.jpg" alt="Image 7"></li>
+<img src="ICICI offer.jpg" alt="Image 8"></li>
+<img src="Bank of Baroda.jpg" alt="Image 9"></li>
+</div>
+<h4 style="background-color:darkgray;">
+All rights reserved @AuctionVista
+</h4>
+</footer>
+
+
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+  <script>
+
+    $(document).ready(function(){
+      $('.auction-slider').slick({
+        dots: true,
+      });
+    });
+  <!-- Include your slider library (e.g., Slick, Owl Carousel, etc.) -->
+  function requestNotificationPermission() {
+    if (Notification.permission !== 'granted') {
+      Notification.requestPermission().then(function(permission) {
+        if (permission === 'granted') {
+          alert("Auction Vista wants to send you notifications.");
+        }
+      });
+    }
+  }
+  
+  if ('Notification' in window) {
+    requestNotificationPermission();
+  } else {
+    console.log('This browser does not support notifications.');
+  }
+document.addEventListener('DOMContentLoaded', function() {
+    const categoryImages = document.querySelectorAll('.category-image');
+    
+    categoryImages.forEach(image => {
+        image.addEventListener('click', function() {
+            const category = this.parentNode.getAttribute('data-category');
+            redirectToCategory(category);
+        });
+    });
+
+    function redirectToCategory(category) {
+        let categoryURL = ''; 
+        switch (category) {
+            case 'watches':
+                categoryURL = '/watches.html'; 
+                break;
+                case 'shows':
+                categoryURL = '/shoes.html'; 
+                break;
+                case 'jewellery':
+                categoryURL = 'jewellery.html'; 
+                break;
+                case 'beauty':
+                categoryURL = 'beauty.html'; 
+                break;
+            case 'books':
+                categoryURL = 'books.html'; 
+                break;
+            case 'clothing':
+                categoryURL = '/CLOTHING .HTML'; 
+                break;
+                case 'medical':
+                categoryURL = 'medical.html'; 
+                break;
+            default:
+                categoryURL = '/default'; 
+                break;
+        }
+        setTimeout(function() {
+            window.location.href = categoryURL;
+        }, 300); 
+    }
+});
+document.addEventListener('DOMContentLoaded', function() {
+  const slides = document.querySelector('.slides');
+  const slideWidth = document.querySelector('.slide').offsetWidth;
+  let slideIndex = 0;
+
+  function moveSlides(index) {
+    slides.style.transform = `translateX(-${slideWidth * index}px)`;
+  }
+
+  document.querySelector('.prev').addEventListener('click', function() {
+    slideIndex = Math.max(slideIndex - 1, 0);
+    moveSlides(slideIndex);
+  });
+
+  document.querySelector('.next').addEventListener('click', function() {
+    slideIndex = Math.min(slideIndex + 1, 3); 
+    moveSlides(slideIndex);
+  });
+
+  const slidesArray = Array.from(document.querySelectorAll('.slide'));
+  slidesArray.forEach(slide => {
+    slide.addEventListener('click', function() {
+      const category = this.getAttribute('data-category');
+      redirectToCategory(category);
+
+      function autoSlide() {
+    nextSlide();
+  }
+
+  setInterval(autoSlide, 3);
+
+  showSlide(slideIndex);
+
+    });
+  });
+
+  function redirectToCategory(category) {
+    let categoryURL = ''; 
+    switch (category) {
+      case 'sports':
+        categoryURL = '/sports.html'; 
+        break;
+        case 'shows':
+        categoryURL = '/shoes.html'; 
+        break;
+      case 'medical':
+        categoryURL = '/medical.html'; 
+        break;
+      case 'watches':
+        categoryURL = 'watches.html'; 
+        break;
+      default:
+        categoryURL = '/default'; 
+        break;
+    }
+    window.location.href = categoryURL;
+  }
+});
+
+
+  </script>
+  
+</body>
+</html>

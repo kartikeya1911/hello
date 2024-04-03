@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Electronics Auction</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body style="background-color: #e2e9bcce;">
+
+  <div class="container mt-4">
+    <h1>Welcome to Electronics Auction</h1>
+    <p>Check out the available electronics items below:</p>
+
+    <div class="row" id="auction-items">
+      <!-- Auction items will be dynamically added here -->
+    </div>
+
+    <div class="mt-4">
+      <h2>Add Item</h2>
+      <form id="addItemForm">
+        <div class="form-group">
+          <label for="itemName">Item Name:</label>
+          <input type="text" class="form-control" id="itemName" placeholder="Enter item name">
+        </div>
+        <div class="form-group">
+          <label for="itemBid">Starting Bid:</label>
+          <input type="number" class="form-control" id="itemBid" placeholder="Enter starting bid">
+        </div>
+        <div class="form-group">
+          <label for="itemImage">Image URL:</label>
+          <input type="text" class="form-control" id="itemImage" placeholder="Enter image URL">
+        </div>
+        <button type="submit" class="btn btn-primary">Add Item</button>
+      </form>
+    </div>
+  </div>
+
+  <script>document.addEventListener("DOMContentLoaded", function() {
+    const auctionItemsContainer = document.getElementById("auction-items");
+    const addItemForm = document.getElementById("addItemForm");
+
+    addItemForm.addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent the form from submitting
+
+        const itemName = document.getElementById("itemName").value;
+        const itemBid = document.getElementById("itemBid").value;
+        const itemImage = document.getElementById("itemImage").value;
+
+        if (itemName && itemBid && itemImage) {
+            const itemCard = `
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <img src="${itemImage}" class="card-img-top" alt="${itemName}">
+                    <div class="card-body">
+                        <h5 class="card-title">${itemName}</h5>
+                        <p class="card-text">Starting Bid: $${itemBid}</p>
+                    </div>
+                </div>
+            </div>
+            `;
+            auctionItemsContainer.insertAdjacentHTML('beforeend', itemCard);
+
+            // Clear form fields after adding item
+            addItemForm.reset();
+        } else {
+            alert("Please fill out all fields.");
+        }
+    });
+});
+</script>
+</body>
+</html>

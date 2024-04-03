@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Auction Website - Watches Section</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Custom CSS for the watches section */
+    body {
+        background-image: url(books.jpg);
+        padding-top: 20px;
+    }
+    h1 {
+      background-color: #d900ff;
+      text-align: center;
+      margin-bottom: 30px;
+       color: beige;
+    }
+    .watch-item {
+      background-color: #fff;
+      border-radius: 5px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+    .watch-item img {
+      width: 200px;
+      height: auto;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .description {
+      display: none;
+      margin-top: 10px;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    .btn-primary {
+      background-color: #007bff;
+      border-color: #007bff;
+    }
+    .btn-primary:hover {
+      background-color: #00b303;
+      border-color: #0056b3;
+    }
+    .message {
+      margin-top: 10px;
+      font-weight: bold;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Books Section</h1>
+    <div class="row">
+      <!-- Watch 1 -->
+      <div class="col-md-4 watch-item">
+        <img src="sst.jpg" alt="Book 1" class="img-fluid" onclick="showDescription('description1')">
+        <p id="description1" class="description">THE NOTABLE ASPECTS OF THE BOOK ARE AS FOLLOWS: The book is divided into four subjects – History, Geography, Political Science and Economics. Each chapter begins with a flow chart explaining the basic concepts. All chapters consist of NCERT Solutions in a separate section ‘NCERT Corner’. Objective type questions include – • Multiple Choice Questions • Fill in the blanks • True and False • Sequencing questions • Correct and Rewrite questions • Assertion-Reason questions • Source based questions Very short, Short and Long Answer questions based on latest CBSE guidelines. HOTS (High Order Thinking Skills) are given to think creatively, critically and innovatively. Evaluate yourself through Self-Assessment Test given at the end of every chapter to enhance your learning process. Three Periodic Test comprise of Pen Paper Test and Multiple Assessments ,which are given as part of the internal assessment. Five Model Test Papers (solved and unsolved) are provided for practice for final examination.</p>
+        <form onsubmit="confirmBid(event, 150, 'message1')">
+          <div class="form-group">
+            <label for="bidAmount1">Bid Amount (Minimum bid: $150):</label>
+            <input type="number" class="form-control" id="bidAmount1" placeholder="Enter bid amount" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Place Bid</button>
+          <p id="message1" class="message"></p>
+        </form>
+      </div>
+      
+      <!-- Add Watch 2 to Watch 20 similarly -->
+      <!-- Watch 2 -->
+      <div class="col-md-4 watch-item">
+        <!-- Image, description, form -->
+        <img src="Nta.jpg" alt="book 2" class="img-fluid" onclick="showDescription('description2')">
+        <p id="description2" class="description"><strong>Language:</strong> English<br>
+            <strong>Binding:</strong>Paperback<br>
+            <strong>Publisher:</strong>Pearson Education India<br>
+            <strong>Genre:</strong> Education<br>
+            <strong>ISBN:</strong> 9789356065901<br>
+            <strong>Edition:</strong> 2023<br>
+            <strong>Pages:</strong><br></p>
+        <form onsubmit="confirmBid(event, 150, 'message1')">
+          <div class="form-group">
+            <label for="bidAmount2">Bid Amount (Minimum bid: $1000):</label>
+            <input type="number" class="form-control" id="bidAmount2" placeholder="Enter bid amount" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Place Bid</button>
+          <p id="message2" class="message"></p>
+        </form>
+      </div>
+      <!-- ... Repeat this structure for Watch 3 to Watch 20 ... -->
+      <div class="col-md-4 watch-item">
+        <!-- Image, description, form -->
+        <img src="jee mains physics.jpg" alt="Watch 3" class="img-fluid" onclick="showDescription('description3')">
+        <p id="description3" class="description"><strong>Binding:</strong>Paperback <br>
+            <strong>Publisher:</strong> MTG Learning Media Pvt. Ltd.<br>
+            <strong>Genre:</strong>JEE Main Previous Year Papers<br>
+            <strong>ISBN:</strong> 9789355558374<br>
+            <strong>Edition:</strong> 2024<br>
+            <strong>Pages:</strong> 620<br>
+            <br>The following are the significant features of the book. • This book provides an exhaustive practice of the questions from the previous 22 years of JEE/AIEEE exams. • The book encompasses chapter-wise and topic-wise segregation of JEE Main syllabus from both classes- XI & XII • This book contains all 113 Online Previous Years’ Papers (2015-2023) and 17 Offline Previous Years’ Papers (2002-2018). • This book comprises 3500+ previous years’ questions of JEE Main with detailed explanations. • The answer key and detailed solutions within the book help students to self-evaluate and understand their “weak areas”. MTG’s 22 Years JEE Main Chapterwise-Topicwise Solutions Chemistry is the best question bank for JEE Main 2023 exam. The book comprises the previous 22 years of JEE Main/ AIEEE question papers exhaustively bifurcated in a chapter-wise Topic-wise format to help the students with thorough practice of the JEE Main Papers.</p></p>
+        <form onsubmit="confirmBid(event, 1500, 'message3')">
+          <div class="form-group">
+            <label for="bidAmount3">Bid Amount (Minimum bid: $1000):</label>
+            <input type="number" class="form-control" id="bidAmount3" placeholder="Enter bid amount" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Place Bid</button>
+          <p id="message3" class="message"></p>
+        </form>
+      </div>
+
+
+      <div class="col-md-4 watch-item">
+        <!-- Image, description, form -->
+        <img src="love games.jpg" alt="book 4" class="img-fluid" onclick="showDescription('description4')">
+        <p id="description4" class="description"><strong>Author:</strong>Ana Huang <br>
+            <strong>Publisher:</strong>Boba Press<br>
+            <strong>Language:</strong>English<br>
+            <strong>Pages:</strong> 2032<br><br>A fire that could end his world as he knew it. Ava Chen is a free spirit trapped by nightmares of a childhood she can't remember. But despite her broken past, she's never stopped seeing the beauty in the world… including the heart beneath the icy exterior of a man she shouldn't want.</p>
+        <form onsubmit="confirmBid(event, 1000, 'message4')">
+          <div class="form-group">
+            <label for="bidAmount4">Bid Amount (Minimum bid: $1000):</label>
+            <input type="number" class="form-control" id="bidAmount4" placeholder="Enter bid amount" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Place Bid</button>
+          <p id="message4" class="message"></p>
+        </form>
+      </div>
+
+
+      <div class="col-md-4 watch-item">
+        <!-- Image, description, form -->
+        <img src="NCERT fingertips.jpg" alt="Watch 1" class="img-fluid" onclick="showDescription('description5')">
+        <p id="description5" class="description"><strong>Binding:</strong>Paperback <br>
+            <strong>Publisher:</strong> MTG Learning Media<br>
+            <strong>Genre:</strong>Science<br>
+            <strong>ISBN:</strong> 9789355555939<br>
+            <strong>Edition:</strong> e2,2024<br>
+            <strong>Pages:</strong> 223<br><br>MTG Objective NCERT at your Fingertips is an unparallel book designed on the complete syllabus of 11th and 12th NCERT textbook. It is the leading choice of Toppers’ and the pinnacle for NEET exam along with NCERT. This book is a must for NEET/JEE/BOARDS/CUET as it has questions extracted from each and every line of the NCERT textbook. • Chapter-wise NCERT notes for quick yet thorough & impactful revisions. • Tabular texts & Illustrative diagrams in HD pages for understanding. • NCERT Based Topic-wise MCQs from each of NCERT to get firm grip on concepts. • NCERT Exemplar Problem MCQs to develop a strong base & go in-depth. • Assertion Reason, Case Based & NV type Questions & HOTS to cover all question typologies. • Exam Archive including Previous years’ NEET & other PMT exam’s questions. • Practice Papers & Model Test Papers to put final practice touch to your preparation. • NEET & JEE Trend Indicator for understanding last 3 years’ analysis of NEET & JEE questions. • For self-evaluation, progress checker has been added. • Answer keys, hints and explanations are also added in the book for micro-level understanding. • Complementary access to Fingertips Achievers package worth Rs. 299/-</p>
+        <form onsubmit="confirmBid(event, 500, 'message5')">
+          <div class="form-group">
+            <label for="bidAmount5">Bid Amount (Minimum bid: $1000):</label>
+            <input type="number" class="form-control" id="bidAmount5" placeholder="Enter bid amount" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Place Bid</button>
+          <p id="message5" class="message"></p>
+        </form>
+      </div>
+
+
+
+      <div class="col-md-4 watch-item">
+        <!-- Image, description, form -->
+        <img src="CUET.JPG" alt="Watch 1" class="img-fluid" onclick="showDescription('description6')">
+        <p id="description6" class="description"><STRONG>Language:</STRONG>english<br><strong>Binding:</strong>Paperback <br>
+            <strong>Publisher:</strong> McGraw Hill Education India<br>
+            <strong>Genre:</strong>Education<br>
+            <strong>ISBN:</strong> 9789355321466<br>
+            <strong>Edition:</strong> 2024<br>
+            <strong>Pages:</strong> 616<br></p>
+        <form onsubmit="confirmBid(event, 800, 'message6')">
+          <div class="form-group">
+            <label for="bidAmount6">Bid Amount (Minimum bid: $1000):</label>
+            <input type="number" class="form-control" id="bidAmount6" placeholder="Enter bid amount" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Place Bid</button>
+          <p id="message2" class="message"></p>
+        </form>
+      </div>
+
+      <div class="col-md-4 watch-item">
+        <!-- Image, description, form -->
+        <img src="MHT.jpg" alt="Watch 1" class="img-fluid" onclick="showDescription('description7')">
+        <p id="description7" class="description"><STRONG>Language:</STRONG>english<br>
+            <strong>Publisher:</strong> Vidyalankar Publications<br>
+            <strong>Genre:</strong>Education<br>
+            <strong>Pages:</strong> 542<br><br>The salient features of this books are : Contains 87 Solved Papers of Physics Subject. Includes papers of MHT-CET 2022. This is the only book in the market that contains past years actual MHT-CET (Physics) questions classified topic wise, along with their detailed solutions . Solutions are easy to understand, with tricks and short-cut methods. This book is written by faculty who have several years of teaching experience.</p>
+        <form onsubmit="confirmBid(event, 750, 'message7')">
+          <div class="form-group">
+            <label for="bidAmount7">Bid Amount (Minimum bid: $1000):</label>
+            <input type="number" class="form-control" id="bidAmount7" placeholder="Enter bid amount" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Place Bid</button>
+          <p id="message7" class="message"></p>
+        </form>
+      </div>
+
+
+
+      <div class="col-md-4 watch-item">
+        <!-- Image, description, form -->
+        <img src="OPSC.jpg" alt="Watch 1" class="img-fluid" onclick="showDescription('description8')">
+        <p id="description8" class="description"><STRONG>Language:</STRONG>english<br>
+            <strong>Publisher:</strong> Rainbow Publications<br>
+            <strong>Author:</strong>Rainbow Group Of Writers<br>
+            <strong>Pages:</strong> 367<br><br>OPSC General Studies And Eassays Paper 2 Odisha Civil Services (Main) Examination New Edition (2023-2024) Guide. Covers Subjects Followings_ Paper-I: Essay Paper-Il: General Studies-I (Indian Heritage and Culture, Odisha Heritage and Culture, History and Geography of the World and Society) Paper-IlI: General Studies-II (Governance, Constitution, Polity, Social Justice and Inter-State Relations) Paper-IV: General Studies-IlI (Technology, Economic Development, Bio-diversity. Environment, Security and Disaster Management) Paper-V: General Studies-IV (Ethics, Integrity and Aptitude) Treasure Trove Previous Years' Question-Papers Subject-wise Topic based Analysis Comprehensive Course Coverage Exam. Oriented Study Materials</p>
+        <form onsubmit="confirmBid(event, 900, 'message8')">
+          <div class="form-group">
+            <label for="bidAmount8">Bid Amount (Minimum bid: $1000):</label>
+            <input type="number" class="form-control" id="bidAmount8" placeholder="Enter bid amount" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Place Bid</button>
+          <p id="message8" class="message"></p>
+        </form>
+      </div>
+
+      <div class="col-md-4 watch-item">
+        <!-- Image, description, form -->
+        <img src="hindi maths.jpg" alt="Watch 1" class="img-fluid" onclick="showDescription('description9')">
+        <p id="description9" class="description">The Book, “BRAHMASTRA Complete Maths Formula Book” is a comprehensive guide that has been designed to help students acquainted with the latest pattern and difficulty level of the exam. This book has been prepared by Aditya Ranjan sir himself & his well experienced content team, keeping the new pattern and the challenges of SSC & other competitive exams in mind. This book has been extensively prepared for all the students who are preparing for any govt. job examination. The book has been updated with the latest pattern. This book will help the students in understanding the structure and format of the exam. The book provides a total of 32 chapters created according to the latest format and guidelines set by different exam organising agencies. Detailed & Smart solutions are provided for each example. Inclusion of enough solved examples, Calculation techniques, plenty of multicolored diagrams and visual effects for better comprehension will be very beneficial for the students preparing for any competitive examination.</p>
+        <form onsubmit="confirmBid(event, 150, 'message9')">
+          <div class="form-group">
+            <label for="bidAmount9">Bid Amount (Minimum bid: $1000):</label>
+            <input type="number" class="form-control" id="bidAmount9" placeholder="Enter bid amount" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Place Bid</button>
+          <p id="message9" class="message"></p>
+        </form>
+      </div>
+
+
+      <div class="col-md-4 watch-item">
+        <!-- Image, description, form -->
+        <img src="manovigyan.jpg" alt="Watch 1" class="img-fluid" onclick="showDescription('description10')">
+        <p id="description10" class="description"><STRONG>Language:</STRONG>Hindi<br>
+            <strong>Publisher:</strong> NEERAJ PUBLICATIONS<br>
+            <strong>Author:</strong>Manish Kumar<br>
+            <strong>Pages:</strong> 3231<br><br></p>
+        <form onsubmit="confirmBid(event, 150, 'message1')">
+          <div class="form-group">
+            <label for="bidAmount10">Bid Amount (Minimum bid: $1000):</label>
+            <input type="number" class="form-control" id="bidAmount10" placeholder="Enter bid amount" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Place Bid</button>
+          <p id="message10" class="message"></p>
+        </form>
+      </div>
+
+
+      <div class="col-md-4 watch-item">
+        <!-- Image, description, form -->
+        <img src="Rich DAD.jpg" alt="Watch 1" class="img-fluid" onclick="showDescription('description11')">
+        <p id="description11" class="description"><STRONG>Language:</STRONG>Hindi<br>
+            <strong>Publisher:</strong> N.A......... <br>
+            <strong>Author:</strong>Robert Kiyosaki<br>
+            <strong>Pages:</strong> 113<br><br></p>
+        <form onsubmit="confirmBid(event, 700, 'message1')">
+          <div class="form-group">
+            <label for="bidAmount11">Bid Amount (Minimum bid: $700):</label>
+            <input type="number" class="form-control" id="bidAmount11" placeholder="Enter bid amount" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Place Bid</button>
+          <p id="message11" class="message"></p>
+        </form>
+      </div>
+
+      <div class="col-md-4 watch-item">
+        <!-- Image, description, form -->
+        <img src="politics.jpg" alt="Watch 1" class="img-fluid" onclick="showDescription('description12')">
+        <p id="description12" class="description"><STRONG>Language:</STRONG>English<br>
+            <strong>Publisher:</strong> N.A......... <br>
+            <strong>Type:</strong>Vocational & Personal Development<br>
+            <br><br>
+            Politics represents the distillation of a lifetime of thought and observation of Aristotle. The aim of the Politics, Aristotle says, is to investigate, on the basis of the constitutions collected, what makes for good government and what makes for bad government and to identify the factors favorable or unfavorable to the preservation of a constitution. Listen to the audiobook to know more about Politics. [The voucher for this audiobook can only be redeemed in Android Devices]</p>
+        <form onsubmit="confirmBid(event, 150, 'message12')">
+          <div class="form-group">
+            <label for="bidAmount2">Bid Amount (Minimum bid: $1000):</label>
+            <input type="number" class="form-control" id="bidAmount2" placeholder="Enter bid amount" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Place Bid</button>
+          <p id="message12" class="message"></p>
+        </form>
+      </div>
+
+      <div class="col-md-4 watch-item">
+        <!-- Image, description, form -->
+        <img src="fee.jpg" alt="Watch 1" class="img-fluid" onclick="showDescription('description13')">
+        <p id="description13" class="description"><STRONG>Language:</STRONG>english<br><strong>Binding:</strong>Paperback <br>
+            <strong>Publisher:</strong> McGraw Hill Education India<br>
+            <strong>Genre:</strong>Computers<br>
+            <strong>ISBN:</strong> 9788183335157, 9788183335157<br>
+            <strong>Edition:</strong> 1st Edition, 2022<br>
+            <strong>Pages:</strong> 742<br></p>
+        <form onsubmit="confirmBid(event, 150, 'message13')">
+          <div class="form-group">
+            <label for="bidAmount13">Bid Amount (Minimum bid: $1000):</label>
+            <input type="number" class="form-control" id="bidAmount2" placeholder="Enter bid amount" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Place Bid</button>
+          <p id="message13" class="message"></p>
+        </form>
+      </div>
+
+
+      <div class="col-md-4 watch-item">
+        <!-- Image, description, form -->
+        <img src="ca.jpg" alt="Watch 1" class="img-fluid" onclick="showDescription('description14')">
+        <p id="description14" class="description">Computer Awareness is an important section for various exams of the country including IBPS, SBI (Bank PO & Clerk), SSC, Railway, Police and many other state competitive exams. Hence, it comes as no surprise that having strong knowledge about computer plays an important role in getting success in exams. This book �Learn, Revise and Practice Computer Awareness� once again brings in the complete study material for Computer knowledge at one place for you. Designed on the basis of close considerations of various examinations� syllabus and pattern, it serves as the most suitable read to understand computer awareness. It includes Chapterwise theories, Question Bank with each chapter, Chapterwise Past Years� Questions and 5 Practice Sets for Complete Practice. Abbreviations and Glossary are also given at the end. Providing to-the-point, chapterwise study supported by definitions, examples, exercises and more, it promotes the best learning along with revision and practice to perform well in exams. TOC Introduction to Computer, Computer Architecture, Computer Hardware, Computer Memory, Data Representation, Computer Software, Operating System, Programming Concepts, Microsoft Windows, Microsoft Office, Database Concepts, Internet and its Services, Computer Security, Practice Sets (1-5), Abbreviations, Glossary</p>
+        <form onsubmit="confirmBid(event, 150, 'message14')">
+          <div class="form-group">
+            <label for="bidAmount14">Bid Amount (Minimum bid: $1000):</label>
+            <input type="number" class="form-control" id="bidAmount14" placeholder="Enter bid amount" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Place Bid</button>
+          <p id="message14" class="message"></p>
+        </form>
+      </div>
+
+
+      <div class="col-md-4 watch-item">
+        <!-- Image, description, form -->
+        <img src="advanced phy.jpg" alt="Watch 1" class="img-fluid" onclick="showDescription('description15')">
+        <p id="description15" class="description">In the past few years, the IIT-JEE has evolved as an examination designed to check a candidate’s true scientific skills. The examination pattern needs one to see those little details which others fail to see. These details tell us how much in-depth we should know to explain a concept in the right direction. Keeping the present-day scenario in mind, JEE Advanced Physics series is written for students, to allow them not only to learn the tools but also to see why they work so nicely in explaining the beauty of ideas behind the subject. The central goal of this series is to help the students develop a thorough understanding of Physics as a subject. This series stresses on building a rock-solid technical knowledge based on firm foundation of the fundamental principles followed by a large collection of formulae. The primary philosophy of this series is to guide the aspirants towards detailed roundwork for strong conceptual understanding and development of problem-solving skills like mature and experienced physicists.
+
+            This updated Third Edition of the series will help the aspirants prepare for both Advanced and Main levels of JEE conducted for IITs and other elite engineering institutions in India. This book will also be equally useful for the students preparing for Physics Olympiads.
+            
+            All books in this series are enriched with detailed exhaustive theory that introduces the concepts of Physics in a clear, concise, thorough and easy-to-understand language. A large collection of relevant problems is provided in eight major categories (including updated archive for JEE Advanced and JEE Main), for which the solutions are demonstrated in a logical and stepwise manner.</p>
+        <form onsubmit="confirmBid(event, 150, 'message15')">
+          <div class="form-group">
+            <label for="bidAmount15">Bid Amount (Minimum bid: $1000):</label>
+            <input type="number" class="form-control" id="bidAmount15" placeholder="Enter bid amount" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Place Bid</button>
+          <p id="message15" class="message"></p>
+        </form>
+      </div>
+
+
+      <div class="col-md-4 watch-item">
+        <!-- Image, description, form -->
+        <img src="human geography.jpg" alt="Watch 1" class="img-fluid" onclick="showDescription('description16')">
+        <p id="description16" class="description">Certificate Physical And Human Geography covers various geographical concepts that are essential for a good understanding of the subject. This book is a good choice for preparing for competitive exams like CSAT.
+
+            Summary Of The Book
+            
+            Certificate Physical And Human Geography provides coverage of fundamental concepts regarding the earth’s topology, the weather and climate, the different climatic regions, and vegetation across the planet. The book is divided into two parts, Physical Geography, and Weather, Climate and Vegetation. Physical Geography covers the various landforms and coastal regions. The second part covers climate and weather related concepts. Physical Geography begins by examining The Earth and its place in the Universe. It then goes on to explore the Earth’s Crust. Then the book looks at the effects that various natural forces have on the Earth’s surface. The book covers natural phenomena like Volcanoes and Earthquakes. It discusses the Weathering Process, Mass Movement, and Groundwater. It proceeds on to cover different landforms and the forces that shaped them. It looks at Desert Landforms, Landforms Made By Running Water, Limestone and Chalk Landforms, and Landforms of Glaciation. It also examines Coastal Landforms, The Oceans, Lakes, Islands and Coral Reefs.
+            
+            The Weather, Climate and Vegetation section covers the concepts of Climate and Weather. It then focuses on different weather conditions and climate zones. It discusses the Hot, Wet Equatorial Climate. It also covers the Tropical Monsoon and Tropical Marine Climates. It looks at desert regions like the Hot Desert and Mid-Latitude Desert Climates. It also focuses on The Savanna or Sudan Climate, The Temperate Continental (Steppe) Climate, and The Mediterranean or Warm Temperate Western Margin Climate. Certificate Physical And Human Geography then covers cool climate zones. It discusses the Siberian or Cool Temperate Continental Climate, The Chinese type of climate or Warm Temperate Eastern Margin Climate. The book then focuses on the Laurentian or The Cool Temperate Eastern Margin Climate, the British or Cool Temperate Western Margin Climate and The Arctic or Polar Climate.
+            
+            This book covers the physical topography of the planet, the landforms and the oceans, rivers and lakes. This comprehensive coverage helps the readers understand the dynamic nature of the planet, and the forces that shape it. It also discusses the vastly different climate conditions that prevail in different geographical parts of the planet. It is a good textbook to help students understand the fundamental concepts of physical geography and the weather and climate. It is also a good preparation material for exams like the Civil Services Preliminaries. The book contains numerous illustrations, maps, diagrams and photographs that complement the text, and each chapter also ends with a questions section to test comprehension of the concepts covered.
+            
+            About Goh Cheng Leong
+            
+            Goh Cheng Leong writes books on Geography and related subjects. He is also the author of Zz Elements Of Geography and Human and Economic Geography.</p>
+        <form onsubmit="confirmBid(event, 150, 'message16')">
+          <div class="form-group">
+            <label for="bidAmount16">Bid Amount (Minimum bid: $1000):</label>
+            <input type="number" class="form-control" id="bidAmount16" placeholder="Enter bid amount" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Place Bid</button>
+          <p id="message16" class="message"></p>
+        </form>
+      </div>
+
+      <div class="col-md-4 watch-item">
+        <!-- Image, description, form -->
+        <img src="electrician.jpg" alt="Watch 1" class="img-fluid" onclick="showDescription('description17')">
+        <p id="description17" class="description">1. NSQF Level 5 deals with the Electrician Theory 2. The Study guide provides the complete study material for 4 semesters 3. Theory given in the chapters are well explained in a simple language National Skills Qualification Framework (NSQF) is The Technical Diploma Program of 3-years that is designed to be industry focused, and aims to prepare its graduates for skill-based careers in the creative industries. The updated edition of NSQF Level 5 Electrician Theory is redesigned strictly on the basis of new revised syllabus as prescribed by DGET. Covering the complete study material into 4 semesters, sync with the syllabus. In addition, the theories have been explained in a simple language with support of suitable figures to help students understand easily. Bundled with accurate and appropriate information, this semesterwise reference book is highly useful for fetching your placement in several trades and various fields in MNCs, PSUs, Skill India and more. TOC First Year: Occassional Safety and Health, Tools For Electrian, Different Fitting tools, Sheet Metal and Carpentry Tools, Basic Electricity and Electrical Materials, Electrical Cables and Soldiers, DC Circuits and Related Laws, Magnetic Terms and Electromagnetism, Altering Current Theory, Polyphase System, Cell and Battery, Electrical Wiring, Earthing, Illumination, Electrical Measuring Instruments, Domestic Appliances, Transformers, Second Year: DC Generator, DC Motor, Three – Phase Induction Motor, AC and DC Winding, Single Phase Induction Motor, Alternator, Synchronous Motor, Converters, Basic Electronics, Transformers and Amplifier, Powers Electronics Devices and IC Regulators, Digital Electronics, Oscilloscope and Mutlivibrators, Control Panel and Accessories, Electrical Drives and Maintenance of Electrical Machines, Electrical Power Generations, Non-Conventional Energy Source, Electrical Power Transmission, Electrical Power Distribution</p>
+        <form onsubmit="confirmBid(event, 150, 'message17')">
+          <div class="form-group">
+            <label for="bidAmount17">Bid Amount (Minimum bid: $1000):</label>
+            <input type="number" class="form-control" id="bidAmount17" placeholder="Enter bid amount" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Place Bid</button>
+          <p id="message17" class="message"></p>
+        </form>
+      </div>
+
+      <div class="col-md-4 watch-item">
+        <!-- Image, description, form -->
+        <img src="ga.jpg" alt="Watch 1" class="img-fluid" onclick="showDescription('description18')">
+        <p id="description18" class="description">Description of Watch 1</p>
+        <form onsubmit="confirmBid(event, 150, 'message1')">
+          <div class="form-group">
+            <label for="bidAmount18">Bid Amount (Minimum bid: $1000):</label>
+            <input type="number" class="form-control" id="bidAmount18" placeholder="Enter bid amount" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Place Bid</button>
+          <p id="message18" class="message"></p>
+        </form>
+      </div>
+
+      <div class="col-md-4 watch-item">
+        <!-- Image, description, form -->
+        <img src="harrison.jpg" alt="Watch 1" class="img-fluid" onclick="showDescription('description19')">
+        <p id="description19" class="description">"DAMS HARRISON NOTE BOOK-FOR PG ENTRANCE”. Ever since its first edition in 1949, Harrison’s Principles of Internal Medicine has been a companion and reference book for every medical student as well as practitioner. As far as the scenario of PG Medical Entrance exams is concerned, a lot of questions are often handpicked from Harrison. But often there is a time shortage to cover important topics from Harrison before the exam. As the title of the book suggests, it is my “NOTE BOOK” of USEFUL ONELINERS, MOST COMMONS, FREQUENTLY ASKED QUESTIONS (FAQ), IMPORTANT TABLES and CHARTS based on Harrison’s 19th edition is by no means a substitute for text book and is solely intended for the purpose of PG Entrance exams. As somebody who has cleared the PG entrance exams recently, it included page numbers of “HIGH YIELDING TOPICS” from Harrison’s 19th edition for those students interested in further reading. Hope that this book will be an indispensable weapon for you to crack the entrance exams.</p>
+        <form onsubmit="confirmBid(event, 150, 'message1')">
+          <div class="form-group">
+            <label for="bidAmount19">Bid Amount (Minimum bid: $1000):</label>
+            <input type="number" class="form-control" id="bidAmount19" placeholder="Enter bid amount" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Place Bid</button>
+          <p id="message19" class="message"></p>
+        </form>
+      </div>
+
+      <div class="col-md-4 watch-item">
+        <!-- Image, description, form -->
+        <img src="me.jpg" alt="Watch 1" class="img-fluid" onclick="showDescription('description20')">
+        <p id="description20" class="description">
+            For the students of U.P.S.C. (Engg services); IAS (Engg. group); B.Sc Engg; Diploma and other competitive courses.
+            More than one thousand Objective Type Questions from various examining bodies have been added. The solutions to Important Objective type Questions have been added at the end of this treatise. It includes Multiple Choice questions, true and false questions, fill in the blank and matching type questions.</p>
+        <form onsubmit="confirmBid(event, 150, 'message1')">
+          <div class="form-group">
+            <label for="bidAmount20">Bid Amount (Minimum bid: $1000):</label>
+            <input type="number" class="form-control" id="bidAmount20" placeholder="Enter bid amount" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Place Bid</button>
+          <p id="message20" class="message"></p>
+        </form>
+      </div>
+
+
+
+
+
+      <div class="col-md-4 watch-item">
+        <img src="sst.jpg" alt="Book 1" class="img-fluid" onclick="showDescription('description21')">
+        <p id="description21" class="description">THE NOTABLE ASPECTS OF THE BOOK ARE AS FOLLOWS: The book is divided into four subjects – History, Geography, Political Science and Economics. Each chapter begins with a flow chart explaining the basic concepts. All chapters consist of NCERT Solutions in a separate section ‘NCERT Corner’. Objective type questions include – • Multiple Choice Questions • Fill in the blanks • True and False • Sequencing questions • Correct and Rewrite questions • Assertion-Reason questions • Source based questions Very short, Short and Long Answer questions based on latest CBSE guidelines. HOTS (High Order Thinking Skills) are given to think creatively, critically and innovatively. Evaluate yourself through Self-Assessment Test given at the end of every chapter to enhance your learning process. Three Periodic Test comprise of Pen Paper Test and Multiple Assessments ,which are given as part of the internal assessment. Five Model Test Papers (solved and unsolved) are provided for practice for final examination.</p>
+        <form onsubmit="confirmBid(event, 150, 'message21')">
+          <div class="form-group">
+            <label for="bidAmount21">Bid Amount (Minimum bid: $150):</label>
+            <input type="number" class="form-control" id="bidAmount21" placeholder="Enter bid amount" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Place Bid</button>
+          <p id="message21" class="message"></p>
+        </form>
+      </div>
+      
+      <!-- Add Watch 2 to Watch 20 similarly -->
+      <!-- Watch 2 -->
+      <div class="col-md-4 watch-item">
+        <!-- Image, description, form -->
+        <img src="Nta.jpg" alt="book 2" class="img-fluid" onclick="showDescription('description22')">
+        <p id="description22" class="description"><strong>Language:</strong> English<br>
+            <strong>Binding:</strong>Paperback<br>
+            <strong>Publisher:</strong>Pearson Education India<br>
+            <strong>Genre:</strong> Education<br>
+            <strong>ISBN:</strong> 9789356065901<br>
+            <strong>Edition:</strong> 2023<br>
+            <strong>Pages:</strong><br></p>
+        <form onsubmit="confirmBid(event, 150, 'message1')">
+          <div class="form-group">
+            <label for="bidAmount2">Bid Amount (Minimum bid: $1000):</label>
+            <input type="number" class="form-control" id="bidAmount2" placeholder="Enter bid amount" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Place Bid</button>
+          <p id="message22" class="message"></p>
+        </form>
+      </div>
+      <!-- ... Repeat this structure for Watch 3 to Watch 20 ... -->
+      <div class="col-md-4 watch-item">
+        <!-- Image, description, form -->
+        <img src="jee mains physics.jpg" alt="Watch 3" class="img-fluid" onclick="showDescription('description23')">
+        <p id="description23" class="description"><strong>Binding:</strong>Paperback <br>
+            <strong>Publisher:</strong> MTG Learning Media Pvt. Ltd.<br>
+            <strong>Genre:</strong>JEE Main Previous Year Papers<br>
+            <strong>ISBN:</strong> 9789355558374<br>
+            <strong>Edition:</strong> 2024<br>
+            <strong>Pages:</strong> 620<br>
+            <br>The following are the significant features of the book. • This book provides an exhaustive practice of the questions from the previous 22 years of JEE/AIEEE exams. • The book encompasses chapter-wise and topic-wise segregation of JEE Main syllabus from both classes- XI & XII • This book contains all 113 Online Previous Years’ Papers (2015-2023) and 17 Offline Previous Years’ Papers (2002-2018). • This book comprises 3500+ previous years’ questions of JEE Main with detailed explanations. • The answer key and detailed solutions within the book help students to self-evaluate and understand their “weak areas”. MTG’s 22 Years JEE Main Chapterwise-Topicwise Solutions Chemistry is the best question bank for JEE Main 2023 exam. The book comprises the previous 22 years of JEE Main/ AIEEE question papers exhaustively bifurcated in a chapter-wise Topic-wise format to help the students with thorough practice of the JEE Main Papers.</p></p>
+        <form onsubmit="confirmBid(event, 1500, 'message23')">
+          <div class="form-group">
+            <label for="bidAmount23">Bid Amount (Minimum bid: $1000):</label>
+            <input type="number" class="form-control" id="bidAmount3" placeholder="Enter bid amount" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Place Bid</button>
+          <p id="message23" class="message"></p>
+        </form>
+      </div>
+
+
+      <div class="col-md-4 watch-item">
+        <!-- Image, description, form -->
+        <img src="love games.jpg" alt="book 4" class="img-fluid" onclick="showDescription('description24')">
+        <p id="description24" class="description"><strong>Author:</strong>Ana Huang <br>
+            <strong>Publisher:</strong>Boba Press<br>
+            <strong>Language:</strong>English<br>
+            <strong>Pages:</strong> 2032<br><br>A fire that could end his world as he knew it. Ava Chen is a free spirit trapped by nightmares of a childhood she can't remember. But despite her broken past, she's never stopped seeing the beauty in the world… including the heart beneath the icy exterior of a man she shouldn't want.</p>
+        <form onsubmit="confirmBid(event, 1000, 'message4')">
+          <div class="form-group">
+            <label for="bidAmount4">Bid Amount (Minimum bid: $1000):</label>
+            <input type="number" class="form-control" id="bidAmount4" placeholder="Enter bid amount" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Place Bid</button>
+          <p id="message4" class="message"></p>
+        </form>
+      </div>
+
+
+      <div class="col-md-4 watch-item">
+        <!-- Image, description, form -->
+        <img src="NCERT fingertips.jpg" alt="Watch 1" class="img-fluid" onclick="showDescription('description25')">
+        <p id="description25" class="description"><strong>Binding:</strong>Paperback <br>
+            <strong>Publisher:</strong> MTG Learning Media<br>
+            <strong>Genre:</strong>Science<br>
+            <strong>ISBN:</strong> 9789355555939<br>
+            <strong>Edition:</strong> e2,2024<br>
+            <strong>Pages:</strong> 223<br><br>MTG Objective NCERT at your Fingertips is an unparallel book designed on the complete syllabus of 11th and 12th NCERT textbook. It is the leading choice of Toppers’ and the pinnacle for NEET exam along with NCERT. This book is a must for NEET/JEE/BOARDS/CUET as it has questions extracted from each and every line of the NCERT textbook. • Chapter-wise NCERT notes for quick yet thorough & impactful revisions. • Tabular texts & Illustrative diagrams in HD pages for understanding. • NCERT Based Topic-wise MCQs from each of NCERT to get firm grip on concepts. • NCERT Exemplar Problem MCQs to develop a strong base & go in-depth. • Assertion Reason, Case Based & NV type Questions & HOTS to cover all question typologies. • Exam Archive including Previous years’ NEET & other PMT exam’s questions. • Practice Papers & Model Test Papers to put final practice touch to your preparation. • NEET & JEE Trend Indicator for understanding last 3 years’ analysis of NEET & JEE questions. • For self-evaluation, progress checker has been added. • Answer keys, hints and explanations are also added in the book for micro-level understanding. • Complementary access to Fingertips Achievers package worth Rs. 299/-</p>
+        <form onsubmit="confirmBid(event, 500, 'message5')">
+          <div class="form-group">
+            <label for="bidAmount5">Bid Amount (Minimum bid: $1000):</label>
+            <input type="number" class="form-control" id="bidAmount5" placeholder="Enter bid amount" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Place Bid</button>
+          <p id="message5" class="message"></p>
+        </form>
+      </div>
+
+
+
+      <div class="col-md-4 watch-item">
+        <!-- Image, description, form -->
+        <img src="CUET.JPG" alt="Watch 1" class="img-fluid" onclick="showDescription('description26')">
+        <p id="description26" class="description"><STRONG>Language:</STRONG>english<br><strong>Binding:</strong>Paperback <br>
+            <strong>Publisher:</strong> McGraw Hill Education India<br>
+            <strong>Genre:</strong>Education<br>
+            <strong>ISBN:</strong> 9789355321466<br>
+            <strong>Edition:</strong> 2024<br>
+            <strong>Pages:</strong> 616<br></p>
+        <form onsubmit="confirmBid(event, 800, 'message6')">
+          <div class="form-group">
+            <label for="bidAmount6">Bid Amount (Minimum bid: $1000):</label>
+            <input type="number" class="form-control" id="bidAmount6" placeholder="Enter bid amount" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Place Bid</button>
+          <p id="message2" class="message"></p>
+        </form>
+      </div>
+
+      <div class="col-md-4 watch-item">
+        <!-- Image, description, form -->
+        <img src="MHT.jpg" alt="Watch 1" class="img-fluid" onclick="showDescription('description27')">
+        <p id="description27" class="description"><STRONG>Language:</STRONG>english<br>
+            <strong>Publisher:</strong> Vidyalankar Publications<br>
+            <strong>Genre:</strong>Education<br>
+            <strong>Pages:</strong> 542<br><br>The salient features of this books are : Contains 87 Solved Papers of Physics Subject. Includes papers of MHT-CET 2022. This is the only book in the market that contains past years actual MHT-CET (Physics) questions classified topic wise, along with their detailed solutions . Solutions are easy to understand, with tricks and short-cut methods. This book is written by faculty who have several years of teaching experience.</p>
+        <form onsubmit="confirmBid(event, 750, 'message7')">
+          <div class="form-group">
+            <label for="bidAmount7">Bid Amount (Minimum bid: $1000):</label>
+            <input type="number" class="form-control" id="bidAmount7" placeholder="Enter bid amount" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Place Bid</button>
+          <p id="message7" class="message"></p>
+        </form>
+      </div>
+
+
+
+      <div class="col-md-4 watch-item">
+        <!-- Image, description, form -->
+        <img src="OPSC.jpg" alt="Watch 1" class="img-fluid" onclick="showDescription('description28')">
+        <p id="description28" class="description"><STRONG>Language:</STRONG>english<br>
+            <strong>Publisher:</strong> Rainbow Publications<br>
+            <strong>Author:</strong>Rainbow Group Of Writers<br>
+            <strong>Pages:</strong> 367<br><br>OPSC General Studies And Eassays Paper 2 Odisha Civil Services (Main) Examination New Edition (2023-2024) Guide. Covers Subjects Followings_ Paper-I: Essay Paper-Il: General Studies-I (Indian Heritage and Culture, Odisha Heritage and Culture, History and Geography of the World and Society) Paper-IlI: General Studies-II (Governance, Constitution, Polity, Social Justice and Inter-State Relations) Paper-IV: General Studies-IlI (Technology, Economic Development, Bio-diversity. Environment, Security and Disaster Management) Paper-V: General Studies-IV (Ethics, Integrity and Aptitude) Treasure Trove Previous Years' Question-Papers Subject-wise Topic based Analysis Comprehensive Course Coverage Exam. Oriented Study Materials</p>
+        <form onsubmit="confirmBid(event, 900, 'message8')">
+          <div class="form-group">
+            <label for="bidAmount8">Bid Amount (Minimum bid: $1000):</label>
+            <input type="number" class="form-control" id="bidAmount8" placeholder="Enter bid amount" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Place Bid</button>
+          <p id="message8" class="message"></p>
+        </form>
+      </div>
+
+      <div class="col-md-4 watch-item">
+        <!-- Image, description, form -->
+        <img src="hindi maths.jpg" alt="Watch 1" class="img-fluid" onclick="showDescription('description29')">
+        <p id="description29" class="description">The Book, “BRAHMASTRA Complete Maths Formula Book” is a comprehensive guide that has been designed to help students acquainted with the latest pattern and difficulty level of the exam. This book has been prepared by Aditya Ranjan sir himself & his well experienced content team, keeping the new pattern and the challenges of SSC & other competitive exams in mind. This book has been extensively prepared for all the students who are preparing for any govt. job examination. The book has been updated with the latest pattern. This book will help the students in understanding the structure and format of the exam. The book provides a total of 32 chapters created according to the latest format and guidelines set by different exam organising agencies. Detailed & Smart solutions are provided for each example. Inclusion of enough solved examples, Calculation techniques, plenty of multicolored diagrams and visual effects for better comprehension will be very beneficial for the students preparing for any competitive examination.</p>
+        <form onsubmit="confirmBid(event, 150, 'message9')">
+          <div class="form-group">
+            <label for="bidAmount9">Bid Amount (Minimum bid: $1000):</label>
+            <input type="number" class="form-control" id="bidAmount9" placeholder="Enter bid amount" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Place Bid</button>
+          <p id="message9" class="message"></p>
+        </form>
+      </div>
+
+
+      <div class="col-md-4 watch-item">
+        <!-- Image, description, form -->
+        <img src="manovigyan.jpg" alt="Watch 1" class="img-fluid" onclick="showDescription('description30')">
+        <p id="description30" class="description"><STRONG>Language:</STRONG>Hindi<br>
+            <strong>Publisher:</strong> NEERAJ PUBLICATIONS<br>
+            <strong>Author:</strong>Manish Kumar<br>
+            <strong>Pages:</strong> 3231<br><br></p>
+        <form onsubmit="confirmBid(event, 150, 'message1')">
+          <div class="form-group">
+            <label for="bidAmount10">Bid Amount (Minimum bid: $1000):</label>
+            <input type="number" class="form-control" id="bidAmount10" placeholder="Enter bid amount" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Place Bid</button>
+          <p id="message10" class="message"></p>
+        </form>
+      </div>
+
+
+      <div class="col-md-4 watch-item">
+        <!-- Image, description, form -->
+        <img src="Rich DAD.jpg" alt="Watch 1" class="img-fluid" onclick="showDescription('description31')">
+        <p id="description31" class="description"><STRONG>Language:</STRONG>Hindi<br>
+            <strong>Publisher:</strong> N.A......... <br>
+            <strong>Author:</strong>Robert Kiyosaki<br>
+            <strong>Pages:</strong> 113<br><br></p>
+        <form onsubmit="confirmBid(event, 700, 'message1')">
+          <div class="form-group">
+            <label for="bidAmount11">Bid Amount (Minimum bid: $700):</label>
+            <input type="number" class="form-control" id="bidAmount11" placeholder="Enter bid amount" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Place Bid</button>
+          <p id="message11" class="message"></p>
+        </form>
+      </div>
+
+      <div class="col-md-4 watch-item">
+        <!-- Image, description, form -->
+        <img src="politics.jpg" alt="Watch 1" class="img-fluid" onclick="showDescription('description32')">
+        <p id="description32" class="description"><STRONG>Language:</STRONG>English<br>
+            <strong>Publisher:</strong> N.A......... <br>
+            <strong>Type:</strong>Vocational & Personal Development<br>
+            <br><br>
+            Politics represents the distillation of a lifetime of thought and observation of Aristotle. The aim of the Politics, Aristotle says, is to investigate, on the basis of the constitutions collected, what makes for good government and what makes for bad government and to identify the factors favorable or unfavorable to the preservation of a constitution. Listen to the audiobook to know more about Politics. [The voucher for this audiobook can only be redeemed in Android Devices]</p>
+        <form onsubmit="confirmBid(event, 150, 'message12')">
+          <div class="form-group">
+            <label for="bidAmount2">Bid Amount (Minimum bid: $1000):</label>
+            <input type="number" class="form-control" id="bidAmount2" placeholder="Enter bid amount" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Place Bid</button>
+          <p id="message12" class="message"></p>
+        </form>
+      </div>
+
+      <div class="col-md-4 watch-item">
+        <!-- Image, description, form -->
+        <img src="fee.jpg" alt="Watch 1" class="img-fluid" onclick="showDescription('description33')">
+        <p id="description33" class="description"><STRONG>Language:</STRONG>english<br><strong>Binding:</strong>Paperback <br>
+            <strong>Publisher:</strong> McGraw Hill Education India<br>
+            <strong>Genre:</strong>Computers<br>
+            <strong>ISBN:</strong> 9788183335157, 9788183335157<br>
+            <strong>Edition:</strong> 1st Edition, 2022<br>
+            <strong>Pages:</strong> 742<br></p>
+        <form onsubmit="confirmBid(event, 150, 'message13')">
+          <div class="form-group">
+            <label for="bidAmount13">Bid Amount (Minimum bid: $1000):</label>
+            <input type="number" class="form-control" id="bidAmount2" placeholder="Enter bid amount" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Place Bid</button>
+          <p id="message13" class="message"></p>
+        </form>
+      </div>
+
+
+      <div class="col-md-4 watch-item">
+        <!-- Image, description, form -->
+        <img src="ca.jpg" alt="Watch 1" class="img-fluid" onclick="showDescription('description34')">
+        <p id="description34" class="description">Computer Awareness is an important section for various exams of the country including IBPS, SBI (Bank PO & Clerk), SSC, Railway, Police and many other state competitive exams. Hence, it comes as no surprise that having strong knowledge about computer plays an important role in getting success in exams. This book �Learn, Revise and Practice Computer Awareness� once again brings in the complete study material for Computer knowledge at one place for you. Designed on the basis of close considerations of various examinations� syllabus and pattern, it serves as the most suitable read to understand computer awareness. It includes Chapterwise theories, Question Bank with each chapter, Chapterwise Past Years� Questions and 5 Practice Sets for Complete Practice. Abbreviations and Glossary are also given at the end. Providing to-the-point, chapterwise study supported by definitions, examples, exercises and more, it promotes the best learning along with revision and practice to perform well in exams. TOC Introduction to Computer, Computer Architecture, Computer Hardware, Computer Memory, Data Representation, Computer Software, Operating System, Programming Concepts, Microsoft Windows, Microsoft Office, Database Concepts, Internet and its Services, Computer Security, Practice Sets (1-5), Abbreviations, Glossary</p>
+        <form onsubmit="confirmBid(event, 150, 'message14')">
+          <div class="form-group">
+            <label for="bidAmount14">Bid Amount (Minimum bid: $1000):</label>
+            <input type="number" class="form-control" id="bidAmount14" placeholder="Enter bid amount" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Place Bid</button>
+          <p id="message14" class="message"></p>
+        </form>
+      </div>
+
+
+      <div class="col-md-4 watch-item">
+        <!-- Image, description, form -->
+        <img src="advanced phy.jpg" alt="Watch 1" class="img-fluid" onclick="showDescription('description35')">
+        <p id="description35" class="description">In the past few years, the IIT-JEE has evolved as an examination designed to check a candidate’s true scientific skills. The examination pattern needs one to see those little details which others fail to see. These details tell us how much in-depth we should know to explain a concept in the right direction. Keeping the present-day scenario in mind, JEE Advanced Physics series is written for students, to allow them not only to learn the tools but also to see why they work so nicely in explaining the beauty of ideas behind the subject. The central goal of this series is to help the students develop a thorough understanding of Physics as a subject. This series stresses on building a rock-solid technical knowledge based on firm foundation of the fundamental principles followed by a large collection of formulae. The primary philosophy of this series is to guide the aspirants towards detailed roundwork for strong conceptual understanding and development of problem-solving skills like mature and experienced physicists.
+
+            This updated Third Edition of the series will help the aspirants prepare for both Advanced and Main levels of JEE conducted for IITs and other elite engineering institutions in India. This book will also be equally useful for the students preparing for Physics Olympiads.
+            
+            All books in this series are enriched with detailed exhaustive theory that introduces the concepts of Physics in a clear, concise, thorough and easy-to-understand language. A large collection of relevant problems is provided in eight major categories (including updated archive for JEE Advanced and JEE Main), for which the solutions are demonstrated in a logical and stepwise manner.</p>
+        <form onsubmit="confirmBid(event, 150, 'message15')">
+          <div class="form-group">
+            <label for="bidAmount15">Bid Amount (Minimum bid: $1000):</label>
+            <input type="number" class="form-control" id="bidAmount15" placeholder="Enter bid amount" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Place Bid</button>
+          <p id="message15" class="message"></p>
+        </form>
+      </div>
+
+
+      <div class="col-md-4 watch-item">
+        <!-- Image, description, form -->
+        <img src="human geography.jpg" alt="Watch 1" class="img-fluid" onclick="showDescription('description36')">
+        <p id="description36" class="description">Certificate Physical And Human Geography covers various geographical concepts that are essential for a good understanding of the subject. This book is a good choice for preparing for competitive exams like CSAT.
+
+            Summary Of The Book
+            
+            Certificate Physical And Human Geography provides coverage of fundamental concepts regarding the earth’s topology, the weather and climate, the different climatic regions, and vegetation across the planet. The book is divided into two parts, Physical Geography, and Weather, Climate and Vegetation. Physical Geography covers the various landforms and coastal regions. The second part covers climate and weather related concepts. Physical Geography begins by examining The Earth and its place in the Universe. It then goes on to explore the Earth’s Crust. Then the book looks at the effects that various natural forces have on the Earth’s surface. The book covers natural phenomena like Volcanoes and Earthquakes. It discusses the Weathering Process, Mass Movement, and Groundwater. It proceeds on to cover different landforms and the forces that shaped them. It looks at Desert Landforms, Landforms Made By Running Water, Limestone and Chalk Landforms, and Landforms of Glaciation. It also examines Coastal Landforms, The Oceans, Lakes, Islands and Coral Reefs.
+            
+            The Weather, Climate and Vegetation section covers the concepts of Climate and Weather. It then focuses on different weather conditions and climate zones. It discusses the Hot, Wet Equatorial Climate. It also covers the Tropical Monsoon and Tropical Marine Climates. It looks at desert regions like the Hot Desert and Mid-Latitude Desert Climates. It also focuses on The Savanna or Sudan Climate, The Temperate Continental (Steppe) Climate, and The Mediterranean or Warm Temperate Western Margin Climate. Certificate Physical And Human Geography then covers cool climate zones. It discusses the Siberian or Cool Temperate Continental Climate, The Chinese type of climate or Warm Temperate Eastern Margin Climate. The book then focuses on the Laurentian or The Cool Temperate Eastern Margin Climate, the British or Cool Temperate Western Margin Climate and The Arctic or Polar Climate.
+            
+            This book covers the physical topography of the planet, the landforms and the oceans, rivers and lakes. This comprehensive coverage helps the readers understand the dynamic nature of the planet, and the forces that shape it. It also discusses the vastly different climate conditions that prevail in different geographical parts of the planet. It is a good textbook to help students understand the fundamental concepts of physical geography and the weather and climate. It is also a good preparation material for exams like the Civil Services Preliminaries. The book contains numerous illustrations, maps, diagrams and photographs that complement the text, and each chapter also ends with a questions section to test comprehension of the concepts covered.
+            
+            About Goh Cheng Leong
+            
+            Goh Cheng Leong writes books on Geography and related subjects. He is also the author of Zz Elements Of Geography and Human and Economic Geography.</p>
+        <form onsubmit="confirmBid(event, 150, 'message16')">
+          <div class="form-group">
+            <label for="bidAmount16">Bid Amount (Minimum bid: $1000):</label>
+            <input type="number" class="form-control" id="bidAmount16" placeholder="Enter bid amount" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Place Bid</button>
+          <p id="message16" class="message"></p>
+        </form>
+      </div>
+
+      <div class="col-md-4 watch-item">
+        <!-- Image, description, form -->
+        <img src="electrician.jpg" alt="Watch 1" class="img-fluid" onclick="showDescription('description37')">
+        <p id="description37" class="description">1. NSQF Level 5 deals with the Electrician Theory 2. The Study guide provides the complete study material for 4 semesters 3. Theory given in the chapters are well explained in a simple language National Skills Qualification Framework (NSQF) is The Technical Diploma Program of 3-years that is designed to be industry focused, and aims to prepare its graduates for skill-based careers in the creative industries. The updated edition of NSQF Level 5 Electrician Theory is redesigned strictly on the basis of new revised syllabus as prescribed by DGET. Covering the complete study material into 4 semesters, sync with the syllabus. In addition, the theories have been explained in a simple language with support of suitable figures to help students understand easily. Bundled with accurate and appropriate information, this semesterwise reference book is highly useful for fetching your placement in several trades and various fields in MNCs, PSUs, Skill India and more. TOC First Year: Occassional Safety and Health, Tools For Electrian, Different Fitting tools, Sheet Metal and Carpentry Tools, Basic Electricity and Electrical Materials, Electrical Cables and Soldiers, DC Circuits and Related Laws, Magnetic Terms and Electromagnetism, Altering Current Theory, Polyphase System, Cell and Battery, Electrical Wiring, Earthing, Illumination, Electrical Measuring Instruments, Domestic Appliances, Transformers, Second Year: DC Generator, DC Motor, Three – Phase Induction Motor, AC and DC Winding, Single Phase Induction Motor, Alternator, Synchronous Motor, Converters, Basic Electronics, Transformers and Amplifier, Powers Electronics Devices and IC Regulators, Digital Electronics, Oscilloscope and Mutlivibrators, Control Panel and Accessories, Electrical Drives and Maintenance of Electrical Machines, Electrical Power Generations, Non-Conventional Energy Source, Electrical Power Transmission, Electrical Power Distribution</p>
+        <form onsubmit="confirmBid(event, 150, 'message17')">
+          <div class="form-group">
+            <label for="bidAmount17">Bid Amount (Minimum bid: $1000):</label>
+            <input type="number" class="form-control" id="bidAmount17" placeholder="Enter bid amount" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Place Bid</button>
+          <p id="message17" class="message"></p>
+        </form>
+      </div>
+
+      <div class="col-md-4 watch-item">
+        <!-- Image, description, form -->
+        <img src="ga.jpg" alt="Watch 1" class="img-fluid" onclick="showDescription('description38')">
+        <p id="description38" class="description">Description of Watch 1</p>
+        <form onsubmit="confirmBid(event, 150, 'message1')">
+          <div class="form-group">
+            <label for="bidAmount18">Bid Amount (Minimum bid: $1000):</label>
+            <input type="number" class="form-control" id="bidAmount18" placeholder="Enter bid amount" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Place Bid</button>
+          <p id="message18" class="message"></p>
+        </form>
+      </div>
+
+      <div class="col-md-4 watch-item">
+        <!-- Image, description, form -->
+        <img src="harrison.jpg" alt="Watch 1" class="img-fluid" onclick="showDescription('description39')">
+        <p id="description39" class="description">"DAMS HARRISON NOTE BOOK-FOR PG ENTRANCE”. Ever since its first edition in 1949, Harrison’s Principles of Internal Medicine has been a companion and reference book for every medical student as well as practitioner. As far as the scenario of PG Medical Entrance exams is concerned, a lot of questions are often handpicked from Harrison. But often there is a time shortage to cover important topics from Harrison before the exam. As the title of the book suggests, it is my “NOTE BOOK” of USEFUL ONELINERS, MOST COMMONS, FREQUENTLY ASKED QUESTIONS (FAQ), IMPORTANT TABLES and CHARTS based on Harrison’s 19th edition is by no means a substitute for text book and is solely intended for the purpose of PG Entrance exams. As somebody who has cleared the PG entrance exams recently, it included page numbers of “HIGH YIELDING TOPICS” from Harrison’s 19th edition for those students interested in further reading. Hope that this book will be an indispensable weapon for you to crack the entrance exams.</p>
+        <form onsubmit="confirmBid(event, 150, 'message1')">
+          <div class="form-group">
+            <label for="bidAmount19">Bid Amount (Minimum bid: $1000):</label>
+            <input type="number" class="form-control" id="bidAmount19" placeholder="Enter bid amount" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Place Bid</button>
+          <p id="message19" class="message"></p>
+        </form>
+      </div>
+
+      <div class="col-md-4 watch-item">
+        <!-- Image, description, form -->
+        <img src="me.jpg" alt="Watch 1" class="img-fluid" onclick="showDescription('description40')">
+        <p id="description40" class="description">
+            For the students of U.P.S.C. (Engg services); IAS (Engg. group); B.Sc Engg; Diploma and other competitive courses.
+            More than one thousand Objective Type Questions from various examining bodies have been added. The solutions to Important Objective type Questions have been added at the end of this treatise. It includes Multiple Choice questions, true and false questions, fill in the blank and matching type questions.</p>
+        <form onsubmit="confirmBid(event, 150, 'message1')">
+          <div class="form-group">
+            <label for="bidAmount20">Bid Amount (Minimum bid: $1000):</label>
+            <input type="number" class="form-control" id="bidAmount20" placeholder="Enter bid amount" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Place Bid</button>
+          <p id="message20" class="message"></p>
+        </form>
+      </div>
+
+
+
+
+      <div class="col-md-4 watch-item">
+        <img src="sst.jpg" alt="Book 1" class="img-fluid" onclick="showDescription('description41')">
+        <p id="description41" class="description">THE NOTABLE ASPECTS OF THE BOOK ARE AS FOLLOWS: The book is divided into four subjects – History, Geography, Political Science and Economics. Each chapter begins with a flow chart explaining the basic concepts. All chapters consist of NCERT Solutions in a separate section ‘NCERT Corner’. Objective type questions include – • Multiple Choice Questions • Fill in the blanks • True and False • Sequencing questions • Correct and Rewrite questions • Assertion-Reason questions • Source based questions Very short, Short and Long Answer questions based on latest CBSE guidelines. HOTS (High Order Thinking Skills) are given to think creatively, critically and innovatively. Evaluate yourself through Self-Assessment Test given at the end of every chapter to enhance your learning process. Three Periodic Test comprise of Pen Paper Test and Multiple Assessments ,which are given as part of the internal assessment. Five Model Test Papers (solved and unsolved) are provided for practice for final examination.</p>
+        <form onsubmit="confirmBid(event, 150, 'message1')">
+          <div class="form-group">
+            <label for="bidAmount1">Bid Amount (Minimum bid: $150):</label>
+            <input type="number" class="form-control" id="bidAmount1" placeholder="Enter bid amount" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Place Bid</button>
+          <p id="message1" class="message"></p>
+        </form>
+      </div>
+      
+      <!-- Add Watch 2 to Watch 20 similarly -->
+      <!-- Watch 2 -->
+      <div class="col-md-4 watch-item">
+        <!-- Image, description, form -->
+        <img src="Nta.jpg" alt="book 2" class="img-fluid" onclick="showDescription('description42')">
+        <p id="description42" class="description"><strong>Language:</strong> English<br>
+            <strong>Binding:</strong>Paperback<br>
+            <strong>Publisher:</strong>Pearson Education India<br>
+            <strong>Genre:</strong> Education<br>
+            <strong>ISBN:</strong> 9789356065901<br>
+            <strong>Edition:</strong> 2023<br>
+            <strong>Pages:</strong><br></p>
+        <form onsubmit="confirmBid(event, 150, 'message1')">
+          <div class="form-group">
+            <label for="bidAmount2">Bid Amount (Minimum bid: $1000):</label>
+            <input type="number" class="form-control" id="bidAmount2" placeholder="Enter bid amount" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Place Bid</button>
+          <p id="message2" class="message"></p>
+        </form>
+      </div>
+      <!-- ... Repeat this structure for Watch 3 to Watch 20 ... -->
+      <div class="col-md-4 watch-item">
+        <!-- Image, description, form -->
+        <img src="jee mains physics.jpg" alt="Watch 3" class="img-fluid" onclick="showDescription('description43')">
+        <p id="description43" class="description"><strong>Binding:</strong>Paperback <br>
+            <strong>Publisher:</strong> MTG Learning Media Pvt. Ltd.<br>
+            <strong>Genre:</strong>JEE Main Previous Year Papers<br>
+            <strong>ISBN:</strong> 9789355558374<br>
+            <strong>Edition:</strong> 2024<br>
+            <strong>Pages:</strong> 620<br>
+            <br>The following are the significant features of the book. • This book provides an exhaustive practice of the questions from the previous 22 years of JEE/AIEEE exams. • The book encompasses chapter-wise and topic-wise segregation of JEE Main syllabus from both classes- XI & XII • This book contains all 113 Online Previous Years’ Papers (2015-2023) and 17 Offline Previous Years’ Papers (2002-2018). • This book comprises 3500+ previous years’ questions of JEE Main with detailed explanations. • The answer key and detailed solutions within the book help students to self-evaluate and understand their “weak areas”. MTG’s 22 Years JEE Main Chapterwise-Topicwise Solutions Chemistry is the best question bank for JEE Main 2023 exam. The book comprises the previous 22 years of JEE Main/ AIEEE question papers exhaustively bifurcated in a chapter-wise Topic-wise format to help the students with thorough practice of the JEE Main Papers.</p></p>
+        <form onsubmit="confirmBid(event, 1500, 'message3')">
+          <div class="form-group">
+            <label for="bidAmount3">Bid Amount (Minimum bid: $1000):</label>
+            <input type="number" class="form-control" id="bidAmount3" placeholder="Enter bid amount" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Place Bid</button>
+          <p id="message3" class="message"></p>
+        </form>
+      </div>
+
+
+      <div class="col-md-4 watch-item">
+        <!-- Image, description, form -->
+        <img src="love games.jpg" alt="book 4" class="img-fluid" onclick="showDescription('description44')">
+        <p id="description44" class="description"><strong>Author:</strong>Ana Huang <br>
+            <strong>Publisher:</strong>Boba Press<br>
+            <strong>Language:</strong>English<br>
+            <strong>Pages:</strong> 2032<br><br>A fire that could end his world as he knew it. Ava Chen is a free spirit trapped by nightmares of a childhood she can't remember. But despite her broken past, she's never stopped seeing the beauty in the world… including the heart beneath the icy exterior of a man she shouldn't want.</p>
+        <form onsubmit="confirmBid(event, 1000, 'message4')">
+          <div class="form-group">
+            <label for="bidAmount4">Bid Amount (Minimum bid: $1000):</label>
+            <input type="number" class="form-control" id="bidAmount4" placeholder="Enter bid amount" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Place Bid</button>
+          <p id="message4" class="message"></p>
+        </form>
+      </div>
+
+
+      <div class="col-md-4 watch-item">
+        <!-- Image, description, form -->
+        <img src="NCERT fingertips.jpg" alt="Watch 1" class="img-fluid" onclick="showDescription('description45')">
+        <p id="description45" class="description"><strong>Binding:</strong>Paperback <br>
+            <strong>Publisher:</strong> MTG Learning Media<br>
+            <strong>Genre:</strong>Science<br>
+            <strong>ISBN:</strong> 9789355555939<br>
+            <strong>Edition:</strong> e2,2024<br>
+            <strong>Pages:</strong> 223<br><br>MTG Objective NCERT at your Fingertips is an unparallel book designed on the complete syllabus of 11th and 12th NCERT textbook. It is the leading choice of Toppers’ and the pinnacle for NEET exam along with NCERT. This book is a must for NEET/JEE/BOARDS/CUET as it has questions extracted from each and every line of the NCERT textbook. • Chapter-wise NCERT notes for quick yet thorough & impactful revisions. • Tabular texts & Illustrative diagrams in HD pages for understanding. • NCERT Based Topic-wise MCQs from each of NCERT to get firm grip on concepts. • NCERT Exemplar Problem MCQs to develop a strong base & go in-depth. • Assertion Reason, Case Based & NV type Questions & HOTS to cover all question typologies. • Exam Archive including Previous years’ NEET & other PMT exam’s questions. • Practice Papers & Model Test Papers to put final practice touch to your preparation. • NEET & JEE Trend Indicator for understanding last 3 years’ analysis of NEET & JEE questions. • For self-evaluation, progress checker has been added. • Answer keys, hints and explanations are also added in the book for micro-level understanding. • Complementary access to Fingertips Achievers package worth Rs. 299/-</p>
+        <form onsubmit="confirmBid(event, 500, 'message5')">
+          <div class="form-group">
+            <label for="bidAmount5">Bid Amount (Minimum bid: $1000):</label>
+            <input type="number" class="form-control" id="bidAmount5" placeholder="Enter bid amount" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Place Bid</button>
+          <p id="message5" class="message"></p>
+        </form>
+      </div>
+
+
+
+      <div class="col-md-4 watch-item">
+        <!-- Image, description, form -->
+        <img src="CUET.JPG" alt="Watch 1" class="img-fluid" onclick="showDescription('description46')">
+        <p id="description46" class="description"><STRONG>Language:</STRONG>english<br><strong>Binding:</strong>Paperback <br>
+            <strong>Publisher:</strong> McGraw Hill Education India<br>
+            <strong>Genre:</strong>Education<br>
+            <strong>ISBN:</strong> 9789355321466<br>
+            <strong>Edition:</strong> 2024<br>
+            <strong>Pages:</strong> 616<br></p>
+        <form onsubmit="confirmBid(event, 800, 'message6')">
+          <div class="form-group">
+            <label for="bidAmount6">Bid Amount (Minimum bid: $1000):</label>
+            <input type="number" class="form-control" id="bidAmount6" placeholder="Enter bid amount" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Place Bid</button>
+          <p id="message2" class="message"></p>
+        </form>
+      </div>
+
+      <div class="col-md-4 watch-item">
+        <!-- Image, description, form -->
+        <img src="MHT.jpg" alt="Watch 1" class="img-fluid" onclick="showDescription('description47')">
+        <p id="description47" class="description"><STRONG>Language:</STRONG>english<br>
+            <strong>Publisher:</strong> Vidyalankar Publications<br>
+            <strong>Genre:</strong>Education<br>
+            <strong>Pages:</strong> 542<br><br>The salient features of this books are : Contains 87 Solved Papers of Physics Subject. Includes papers of MHT-CET 2022. This is the only book in the market that contains past years actual MHT-CET (Physics) questions classified topic wise, along with their detailed solutions . Solutions are easy to understand, with tricks and short-cut methods. This book is written by faculty who have several years of teaching experience.</p>
+        <form onsubmit="confirmBid(event, 750, 'message7')">
+          <div class="form-group">
+            <label for="bidAmount7">Bid Amount (Minimum bid: $1000):</label>
+            <input type="number" class="form-control" id="bidAmount7" placeholder="Enter bid amount" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Place Bid</button>
+          <p id="message7" class="message"></p>
+        </form>
+      </div>
+
+
+
+      <div class="col-md-4 watch-item">
+        <!-- Image, description, form -->
+        <img src="OPSC.jpg" alt="Watch 1" class="img-fluid" onclick="showDescription('description48')">
+        <p id="description48" class="description"><STRONG>Language:</STRONG>english<br>
+            <strong>Publisher:</strong> Rainbow Publications<br>
+            <strong>Author:</strong>Rainbow Group Of Writers<br>
+            <strong>Pages:</strong> 367<br><br>OPSC General Studies And Eassays Paper 2 Odisha Civil Services (Main) Examination New Edition (2023-2024) Guide. Covers Subjects Followings_ Paper-I: Essay Paper-Il: General Studies-I (Indian Heritage and Culture, Odisha Heritage and Culture, History and Geography of the World and Society) Paper-IlI: General Studies-II (Governance, Constitution, Polity, Social Justice and Inter-State Relations) Paper-IV: General Studies-IlI (Technology, Economic Development, Bio-diversity. Environment, Security and Disaster Management) Paper-V: General Studies-IV (Ethics, Integrity and Aptitude) Treasure Trove Previous Years' Question-Papers Subject-wise Topic based Analysis Comprehensive Course Coverage Exam. Oriented Study Materials</p>
+        <form onsubmit="confirmBid(event, 900, 'message8')">
+          <div class="form-group">
+            <label for="bidAmount8">Bid Amount (Minimum bid: $1000):</label>
+            <input type="number" class="form-control" id="bidAmount8" placeholder="Enter bid amount" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Place Bid</button>
+          <p id="message8" class="message"></p>
+        </form>
+      </div>
+
+      <div class="col-md-4 watch-item">
+        <!-- Image, description, form -->
+        <img src="hindi maths.jpg" alt="Watch 1" class="img-fluid" onclick="showDescription('description49')">
+        <p id="description49" class="description">The Book, “BRAHMASTRA Complete Maths Formula Book” is a comprehensive guide that has been designed to help students acquainted with the latest pattern and difficulty level of the exam. This book has been prepared by Aditya Ranjan sir himself & his well experienced content team, keeping the new pattern and the challenges of SSC & other competitive exams in mind. This book has been extensively prepared for all the students who are preparing for any govt. job examination. The book has been updated with the latest pattern. This book will help the students in understanding the structure and format of the exam. The book provides a total of 32 chapters created according to the latest format and guidelines set by different exam organising agencies. Detailed & Smart solutions are provided for each example. Inclusion of enough solved examples, Calculation techniques, plenty of multicolored diagrams and visual effects for better comprehension will be very beneficial for the students preparing for any competitive examination.</p>
+        <form onsubmit="confirmBid(event, 150, 'message9')">
+          <div class="form-group">
+            <label for="bidAmount9">Bid Amount (Minimum bid: $1000):</label>
+            <input type="number" class="form-control" id="bidAmount9" placeholder="Enter bid amount" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Place Bid</button>
+          <p id="message9" class="message"></p>
+        </form>
+      </div>
+
+
+      <div class="col-md-4 watch-item">
+        <!-- Image, description, form -->
+        <img src="manovigyan.jpg" alt="Watch 1" class="img-fluid" onclick="showDescription('description50')">
+        <p id="description50" class="description"><STRONG>Language:</STRONG>Hindi<br>
+            <strong>Publisher:</strong> NEERAJ PUBLICATIONS<br>
+            <strong>Author:</strong>Manish Kumar<br>
+            <strong>Pages:</strong> 3231<br><br></p>
+        <form onsubmit="confirmBid(event, 150, 'message1')">
+          <div class="form-group">
+            <label for="bidAmount10">Bid Amount (Minimum bid: $1000):</label>
+            <input type="number" class="form-control" id="bidAmount10" placeholder="Enter bid amount" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Place Bid</button>
+          <p id="message10" class="message"></p>
+        </form>
+      </div>
+
+
+      <div class="col-md-4 watch-item">
+        <!-- Image, description, form -->
+        <img src="Rich DAD.jpg" alt="Watch 1" class="img-fluid" onclick="showDescription('description51')">
+        <p id="description51" class="description"><STRONG>Language:</STRONG>Hindi<br>
+            <strong>Publisher:</strong> N.A......... <br>
+            <strong>Author:</strong>Robert Kiyosaki<br>
+            <strong>Pages:</strong> 113<br><br></p>
+        <form onsubmit="confirmBid(event, 700, 'message1')">
+          <div class="form-group">
+            <label for="bidAmount11">Bid Amount (Minimum bid: $700):</label>
+            <input type="number" class="form-control" id="bidAmount11" placeholder="Enter bid amount" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Place Bid</button>
+          <p id="message11" class="message"></p>
+        </form>
+      </div>
+
+      <div class="col-md-4 watch-item">
+        <!-- Image, description, form -->
+        <img src="politics.jpg" alt="Watch 1" class="img-fluid" onclick="showDescription('description52')">
+        <p id="description52" class="description"><STRONG>Language:</STRONG>English<br>
+            <strong>Publisher:</strong> N.A......... <br>
+            <strong>Type:</strong>Vocational & Personal Development<br>
+            <br><br>
+            Politics represents the distillation of a lifetime of thought and observation of Aristotle. The aim of the Politics, Aristotle says, is to investigate, on the basis of the constitutions collected, what makes for good government and what makes for bad government and to identify the factors favorable or unfavorable to the preservation of a constitution. Listen to the audiobook to know more about Politics. [The voucher for this audiobook can only be redeemed in Android Devices]</p>
+        <form onsubmit="confirmBid(event, 150, 'message12')">
+          <div class="form-group">
+            <label for="bidAmount2">Bid Amount (Minimum bid: $1000):</label>
+            <input type="number" class="form-control" id="bidAmount2" placeholder="Enter bid amount" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Place Bid</button>
+          <p id="message12" class="message"></p>
+        </form>
+      </div>
+
+      <div class="col-md-4 watch-item">
+        <!-- Image, description, form -->
+        <img src="fee.jpg" alt="Watch 1" class="img-fluid" onclick="showDescription('description53')">
+        <p id="description53" class="description"><STRONG>Language:</STRONG>english<br><strong>Binding:</strong>Paperback <br>
+            <strong>Publisher:</strong> McGraw Hill Education India<br>
+            <strong>Genre:</strong>Computers<br>
+            <strong>ISBN:</strong> 9788183335157, 9788183335157<br>
+            <strong>Edition:</strong> 1st Edition, 2022<br>
+            <strong>Pages:</strong> 742<br></p>
+        <form onsubmit="confirmBid(event, 150, 'message13')">
+          <div class="form-group">
+            <label for="bidAmount13">Bid Amount (Minimum bid: $1000):</label>
+            <input type="number" class="form-control" id="bidAmount2" placeholder="Enter bid amount" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Place Bid</button>
+          <p id="message13" class="message"></p>
+        </form>
+      </div>
+
+
+      <div class="col-md-4 watch-item">
+        <!-- Image, description, form -->
+        <img src="ca.jpg" alt="Watch 1" class="img-fluid" onclick="showDescription('description54')">
+        <p id="description54" class="description">Computer Awareness is an important section for various exams of the country including IBPS, SBI (Bank PO & Clerk), SSC, Railway, Police and many other state competitive exams. Hence, it comes as no surprise that having strong knowledge about computer plays an important role in getting success in exams. This book �Learn, Revise and Practice Computer Awareness� once again brings in the complete study material for Computer knowledge at one place for you. Designed on the basis of close considerations of various examinations� syllabus and pattern, it serves as the most suitable read to understand computer awareness. It includes Chapterwise theories, Question Bank with each chapter, Chapterwise Past Years� Questions and 5 Practice Sets for Complete Practice. Abbreviations and Glossary are also given at the end. Providing to-the-point, chapterwise study supported by definitions, examples, exercises and more, it promotes the best learning along with revision and practice to perform well in exams. TOC Introduction to Computer, Computer Architecture, Computer Hardware, Computer Memory, Data Representation, Computer Software, Operating System, Programming Concepts, Microsoft Windows, Microsoft Office, Database Concepts, Internet and its Services, Computer Security, Practice Sets (1-5), Abbreviations, Glossary</p>
+        <form onsubmit="confirmBid(event, 150, 'message14')">
+          <div class="form-group">
+            <label for="bidAmount14">Bid Amount (Minimum bid: $1000):</label>
+            <input type="number" class="form-control" id="bidAmount14" placeholder="Enter bid amount" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Place Bid</button>
+          <p id="message14" class="message"></p>
+        </form>
+      </div>
+
+
+      <div class="col-md-4 watch-item">
+        <!-- Image, description, form -->
+        <img src="advanced phy.jpg" alt="Watch 1" class="img-fluid" onclick="showDescription('description55')">
+        <p id="description55" class="description">In the past few years, the IIT-JEE has evolved as an examination designed to check a candidate’s true scientific skills. The examination pattern needs one to see those little details which others fail to see. These details tell us how much in-depth we should know to explain a concept in the right direction. Keeping the present-day scenario in mind, JEE Advanced Physics series is written for students, to allow them not only to learn the tools but also to see why they work so nicely in explaining the beauty of ideas behind the subject. The central goal of this series is to help the students develop a thorough understanding of Physics as a subject. This series stresses on building a rock-solid technical knowledge based on firm foundation of the fundamental principles followed by a large collection of formulae. The primary philosophy of this series is to guide the aspirants towards detailed roundwork for strong conceptual understanding and development of problem-solving skills like mature and experienced physicists.
+
+            This updated Third Edition of the series will help the aspirants prepare for both Advanced and Main levels of JEE conducted for IITs and other elite engineering institutions in India. This book will also be equally useful for the students preparing for Physics Olympiads.
+            
+            All books in this series are enriched with detailed exhaustive theory that introduces the concepts of Physics in a clear, concise, thorough and easy-to-understand language. A large collection of relevant problems is provided in eight major categories (including updated archive for JEE Advanced and JEE Main), for which the solutions are demonstrated in a logical and stepwise manner.</p>
+        <form onsubmit="confirmBid(event, 150, 'message15')">
+          <div class="form-group">
+            <label for="bidAmount15">Bid Amount (Minimum bid: $1000):</label>
+            <input type="number" class="form-control" id="bidAmount15" placeholder="Enter bid amount" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Place Bid</button>
+          <p id="message15" class="message"></p>
+        </form>
+      </div>
+
+
+      <div class="col-md-4 watch-item">
+        <!-- Image, description, form -->
+        <img src="human geography.jpg" alt="Watch 1" class="img-fluid" onclick="showDescription('descriptio56')">
+        <p id="description56" class="description">Certificate Physical And Human Geography covers various geographical concepts that are essential for a good understanding of the subject. This book is a good choice for preparing for competitive exams like CSAT.
+
+            Summary Of The Book
+            
+            Certificate Physical And Human Geography provides coverage of fundamental concepts regarding the earth’s topology, the weather and climate, the different climatic regions, and vegetation across the planet. The book is divided into two parts, Physical Geography, and Weather, Climate and Vegetation. Physical Geography covers the various landforms and coastal regions. The second part covers climate and weather related concepts. Physical Geography begins by examining The Earth and its place in the Universe. It then goes on to explore the Earth’s Crust. Then the book looks at the effects that various natural forces have on the Earth’s surface. The book covers natural phenomena like Volcanoes and Earthquakes. It discusses the Weathering Process, Mass Movement, and Groundwater. It proceeds on to cover different landforms and the forces that shaped them. It looks at Desert Landforms, Landforms Made By Running Water, Limestone and Chalk Landforms, and Landforms of Glaciation. It also examines Coastal Landforms, The Oceans, Lakes, Islands and Coral Reefs.
+            
+            The Weather, Climate and Vegetation section covers the concepts of Climate and Weather. It then focuses on different weather conditions and climate zones. It discusses the Hot, Wet Equatorial Climate. It also covers the Tropical Monsoon and Tropical Marine Climates. It looks at desert regions like the Hot Desert and Mid-Latitude Desert Climates. It also focuses on The Savanna or Sudan Climate, The Temperate Continental (Steppe) Climate, and The Mediterranean or Warm Temperate Western Margin Climate. Certificate Physical And Human Geography then covers cool climate zones. It discusses the Siberian or Cool Temperate Continental Climate, The Chinese type of climate or Warm Temperate Eastern Margin Climate. The book then focuses on the Laurentian or The Cool Temperate Eastern Margin Climate, the British or Cool Temperate Western Margin Climate and The Arctic or Polar Climate.
+            
+            This book covers the physical topography of the planet, the landforms and the oceans, rivers and lakes. This comprehensive coverage helps the readers understand the dynamic nature of the planet, and the forces that shape it. It also discusses the vastly different climate conditions that prevail in different geographical parts of the planet. It is a good textbook to help students understand the fundamental concepts of physical geography and the weather and climate. It is also a good preparation material for exams like the Civil Services Preliminaries. The book contains numerous illustrations, maps, diagrams and photographs that complement the text, and each chapter also ends with a questions section to test comprehension of the concepts covered.
+            
+            About Goh Cheng Leong
+            
+            Goh Cheng Leong writes books on Geography and related subjects. He is also the author of Zz Elements Of Geography and Human and Economic Geography.</p>
+        <form onsubmit="confirmBid(event, 150, 'message16')">
+          <div class="form-group">
+            <label for="bidAmount16">Bid Amount (Minimum bid: $1000):</label>
+            <input type="number" class="form-control" id="bidAmount16" placeholder="Enter bid amount" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Place Bid</button>
+          <p id="message16" class="message"></p>
+        </form>
+      </div>
+
+      <div class="col-md-4 watch-item">
+        <!-- Image, description, form -->
+        <img src="electrician.jpg" alt="Watch 1" class="img-fluid" onclick="showDescription('description57')">
+        <p id="description57" class="description">1. NSQF Level 5 deals with the Electrician Theory 2. The Study guide provides the complete study material for 4 semesters 3. Theory given in the chapters are well explained in a simple language National Skills Qualification Framework (NSQF) is The Technical Diploma Program of 3-years that is designed to be industry focused, and aims to prepare its graduates for skill-based careers in the creative industries. The updated edition of NSQF Level 5 Electrician Theory is redesigned strictly on the basis of new revised syllabus as prescribed by DGET. Covering the complete study material into 4 semesters, sync with the syllabus. In addition, the theories have been explained in a simple language with support of suitable figures to help students understand easily. Bundled with accurate and appropriate information, this semesterwise reference book is highly useful for fetching your placement in several trades and various fields in MNCs, PSUs, Skill India and more. TOC First Year: Occassional Safety and Health, Tools For Electrian, Different Fitting tools, Sheet Metal and Carpentry Tools, Basic Electricity and Electrical Materials, Electrical Cables and Soldiers, DC Circuits and Related Laws, Magnetic Terms and Electromagnetism, Altering Current Theory, Polyphase System, Cell and Battery, Electrical Wiring, Earthing, Illumination, Electrical Measuring Instruments, Domestic Appliances, Transformers, Second Year: DC Generator, DC Motor, Three – Phase Induction Motor, AC and DC Winding, Single Phase Induction Motor, Alternator, Synchronous Motor, Converters, Basic Electronics, Transformers and Amplifier, Powers Electronics Devices and IC Regulators, Digital Electronics, Oscilloscope and Mutlivibrators, Control Panel and Accessories, Electrical Drives and Maintenance of Electrical Machines, Electrical Power Generations, Non-Conventional Energy Source, Electrical Power Transmission, Electrical Power Distribution</p>
+        <form onsubmit="confirmBid(event, 150, 'message17')">
+          <div class="form-group">
+            <label for="bidAmount17">Bid Amount (Minimum bid: $1000):</label>
+            <input type="number" class="form-control" id="bidAmount17" placeholder="Enter bid amount" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Place Bid</button>
+          <p id="message17" class="message"></p>
+        </form>
+      </div>
+
+      <div class="col-md-4 watch-item">
+        <!-- Image, description, form -->
+        <img src="ga.jpg" alt="Watch 1" class="img-fluid" onclick="showDescription('description58')">
+        <p id="description58" class="description">Description of Watch 1</p>
+        <form onsubmit="confirmBid(event, 150, 'message1')">
+          <div class="form-group">
+            <label for="bidAmount18">Bid Amount (Minimum bid: $1000):</label>
+            <input type="number" class="form-control" id="bidAmount18" placeholder="Enter bid amount" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Place Bid</button>
+          <p id="message18" class="message"></p>
+        </form>
+      </div>
+
+      <div class="col-md-4 watch-item">
+        <!-- Image, description, form -->
+        <img src="harrison.jpg" alt="Watch 1" class="img-fluid" onclick="showDescription('description59')">
+        <p id="description59" class="description">"DAMS HARRISON NOTE BOOK-FOR PG ENTRANCE”. Ever since its first edition in 1949, Harrison’s Principles of Internal Medicine has been a companion and reference book for every medical student as well as practitioner. As far as the scenario of PG Medical Entrance exams is concerned, a lot of questions are often handpicked from Harrison. But often there is a time shortage to cover important topics from Harrison before the exam. As the title of the book suggests, it is my “NOTE BOOK” of USEFUL ONELINERS, MOST COMMONS, FREQUENTLY ASKED QUESTIONS (FAQ), IMPORTANT TABLES and CHARTS based on Harrison’s 19th edition is by no means a substitute for text book and is solely intended for the purpose of PG Entrance exams. As somebody who has cleared the PG entrance exams recently, it included page numbers of “HIGH YIELDING TOPICS” from Harrison’s 19th edition for those students interested in further reading. Hope that this book will be an indispensable weapon for you to crack the entrance exams.</p>
+        <form onsubmit="confirmBid(event, 150, 'message1')">
+          <div class="form-group">
+            <label for="bidAmount19">Bid Amount (Minimum bid: $1000):</label>
+            <input type="number" class="form-control" id="bidAmount19" placeholder="Enter bid amount" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Place Bid</button>
+          <p id="message19" class="message"></p>
+        </form>
+      </div>
+
+      <div class="col-md-4 watch-item">
+        <!-- Image, description, form -->
+        <img src="me.jpg" alt="Watch 1" class="img-fluid" onclick="showDescription('description60')">
+        <p id="description60" class="description">
+            For the students of U.P.S.C. (Engg services); IAS (Engg. group); B.Sc Engg; Diploma and other competitive courses.
+            More than one thousand Objective Type Questions from various examining bodies have been added. The solutions to Important Objective type Questions have been added at the end of this treatise. It includes Multiple Choice questions, true and false questions, fill in the blank and matching type questions.</p>
+        <form onsubmit="confirmBid(event, 150, 'message1')">
+          <div class="form-group">
+            <label for="bidAmount20">Bid Amount (Minimum bid: $1000):</label>
+            <input type="number" class="form-control" id="bidAmount20" placeholder="Enter bid amount" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Place Bid</button>
+          <p id="message20" class="message"></p>
+        </form>
+      </div>
+
+
+
+
+
+
+
+    </div>
+  </div>
+
+  <!-- Bootstrap JS and jQuery (required for Bootstrap components) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    function showDescription(descriptionId) {
+      var description = document.getElementById(descriptionId);
+      if (description.style.display === "none") {
+        description.style.display = "block";
+      } else {
+        description.style.display = "none";
+      }
+    }
+
+    function confirmBid(event, basePrice, messageElementId) {
+      event.preventDefault();
+      var bidAmount = parseFloat(document.getElementById(messageElementId.replace('message', 'bidAmount')).value);
+      var message = document.getElementById(messageElementId);
+
+      if (bidAmount < basePrice) {
+        message.innerText = "Bid amount must be at least the base price ($" + basePrice + ").";
+        return;
+      }
+
+      if (confirm("Are you sure you want to place a bid for $" + bidAmount + "")) {
+        window.location.href = 'CHECKOUT.html'; // Redirect to the payment page
+      } else {
+        message.innerText = "Bid canceled.";
+      }
+      function confirmBid(event, basePrice, messageElementId) {
+      event.preventDefault();
+      var bidAmount = parseFloat(document.getElementById(messageElementId.replace('message', 'bidAmount')).value);
+      var message = document.getElementById(messageElementId);
+
+      if (bidAmount < basePrice) {
+        message.innerText = "Bid amount must be at least the base price ($" + basePrice + ").";
+        return;
+      }
+
+      // Ask for confirmation before placing the bid
+      if (confirm("Are you sure you want to place a bid for $" + bidAmount + "?")) {
+        // Redirect to the payment file (replace 'payment.html' with your actual payment file)
+        window.location.href = 'CHECKOUT.html';
+      } else {
+        message.innerText = "Bid canceled.";
+      }
+    }
+    }
+  </script>
+</body>
+</html>
